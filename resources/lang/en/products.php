@@ -14,5 +14,5 @@ return [
     */
 
     'created' => 'A new product was created!',
-
+    'deleted' => 'The product was deleted.'
 ];

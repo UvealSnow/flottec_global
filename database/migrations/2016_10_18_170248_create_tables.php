@@ -19,7 +19,7 @@ class CreateTables extends Migration
             $table->string('classification');
             $table->string('name');
             $table->string('mineral');
-            $table->string('chemical_description');
+            $table->longtext('chemical_description');
             $table->string('chemical_family');
             $table->timestamps();
         });
@@ -27,7 +27,6 @@ class CreateTables extends Migration
         Schema::create('safety_sheets', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('product_id');
-            $table->string('name');
             $table->string('english_sheet')->nullable();
             $table->string('spanish_sheet')->nullable();
             $table->timestamps();
@@ -44,21 +43,22 @@ class CreateTables extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->string('title');
-            $table->string('body');
+            $table->longtext('body');
             $table->timestamps();
         });
 
         Schema::create('files', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('post_id');
+            $table->string('original_name');
             $table->string('file');
             $table->timestamps();
         });
 
         Schema::create('blacklist', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('domain');
+            $table->string('name')->nullable();
+            $table->string('domain')->nullable();
             $table->timestamps();
         });
 

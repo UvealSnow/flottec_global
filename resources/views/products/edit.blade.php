@@ -8,15 +8,16 @@
                 <div class="panel-heading">Products</div>
                 <div class="panel-body">
 
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/products') }}" enctype="multipart/form-data">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ url("/products/$product->id") }}" enctype="multipart/form-data">
                         
                         {{ csrf_field() }}
+                        <input type="hidden" name="_method" value="put">
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-4 control-label">Name</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+                                <input id="name" type="text" class="form-control" name="name" value="{{ $product->name }}" required autofocus>
 
                                 @if ($errors->has('name'))
                                     <span class="help-block">
@@ -30,7 +31,7 @@
                             <label for="category" class="col-md-4 control-label">Category</label>
 
                             <div class="col-md-6">
-                                <input id="category" type="text" class="form-control" name="category" value="{{ old('category') }}" required>
+                                <input id="category" type="text" class="form-control" name="category" value="{{ $product->category }}" required>
 
                                 @if ($errors->has('category'))
                                     <span class="help-block">
@@ -44,7 +45,7 @@
                             <label for="classification" class="col-md-4 control-label">Classification</label>
 
                             <div class="col-md-6">
-                                <input id="classification" type="text" class="form-control" name="classification" value="{{ old('classification') }}" required>
+                                <input id="classification" type="text" class="form-control" name="classification" value="{{ $product->classification }}" required>
 
                                 @if ($errors->has('classification'))
                                     <span class="help-block">
@@ -58,7 +59,7 @@
                             <label for="mineral" class="col-md-4 control-label">Mineral</label>
 
                             <div class="col-md-6">
-                                <input id="mineral" type="text" class="form-control" name="mineral" value="{{ old('mineral') }}" required>
+                                <input id="mineral" type="text" class="form-control" name="mineral" value="{{ $product->mineral }}" required>
 
                                 @if ($errors->has('mineral'))
                                     <span class="help-block">
@@ -72,7 +73,7 @@
                             <label for="chemical_description" class="col-md-4 control-label">Chemical description</label>
 
                             <div class="col-md-6">
-                                <textarea id="chemical_description" type="text" class="form-control" name="chemical_description" value="{{ old('chemical_description') }}" required></textarea>
+                                <textarea id="chemical_description" type="text" class="form-control" name="chemical_description" required>{{ $product->chemical_description }}</textarea>
 
                                 @if ($errors->has('chemical_description'))
                                     <span class="help-block">
@@ -86,7 +87,7 @@
                             <label for="chemical_family" class="col-md-4 control-label">Chemical family</label>
 
                             <div class="col-md-6">
-                                <textarea id="chemical_family" type="text" class="form-control" name="chemical_family" value="{{ old('chemical_family') }}" required></textarea>
+                                <textarea id="chemical_family" type="text" class="form-control" name="chemical_family" required>{{ $product->chemical_family }}</textarea>
 
                                 @if ($errors->has('chemical_family'))
                                     <span class="help-block">
@@ -100,7 +101,7 @@
                             <label for="english_sheet" class="col-md-4 control-label">English safety sheet</label>
 
                             <div class="col-md-6">
-                                <input id="english_sheet" type="file" class="form-control" value="{{ old('english_sheet') }}" name="english_sheet">
+                                <input id="english_sheet" type="file" class="form-control" value="{{ $product->safety_sheets->english_sheet }}" name="english_sheet">
 
                                 @if ($errors->has('english_sheet'))
                                     <span class="help-block">
@@ -114,7 +115,7 @@
                             <label for="spanish_sheet" class="col-md-4 control-label">Spanish safety sheet</label>
 
                             <div class="col-md-6">
-                                <input id="spanish_sheet" type="file" class="form-control" value="{{ old('spanish_sheet') }}" name="spanish_sheet">
+                                <input id="spanish_sheet" type="file" class="form-control" value="{{ $product->safety_sheets->spanish_sheet }}" name="spanish_sheet">
 
                                 @if ($errors->has('spanish_sheet'))
                                     <span class="help-block">
@@ -128,7 +129,7 @@
                             <label for="tech_sheet" class="col-md-4 control-label">Technical sheet</label>
 
                             <div class="col-md-6">
-                                <input id="tech_sheet" type="file" class="form-control" name="tech_sheet" value="{{ old('tech_sheet') }}" required>
+                                <input id="tech_sheet" type="file" class="form-control" name="tech_sheet" value="{{ $product->tech_sheet->tech_sheet }}">
 
                                 @if ($errors->has('tech_sheet'))
                                     <span class="help-block">

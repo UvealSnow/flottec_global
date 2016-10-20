@@ -19,7 +19,7 @@ class RegistrationBlocked extends Mailable
      *
      * @return void
      */
-    public function __construct() {
+    public function __construct (User $user) {
         $this->user = $user;
     }
 
@@ -30,6 +30,6 @@ class RegistrationBlocked extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.registrationblocked');
+        return $this->view('emails.registration_blocked');
     }
 }

@@ -14,21 +14,20 @@
                         </div>
                     @endif
 
-                    @if (Auth::user()->type == 'admin')
-                        <a href="{{ url("/products/create") }}">Create new</a> <hr>
+                    @if (Auth::user() && Auth::user()->type == 'admin')
+                        <a class="btn btn-primary" href="{{ url("/research/create") }}">New post</a> <hr>
                     @endif
                     
-                    @if (count($products) > 0)
-                        @foreach ($products as $product)
-                            <a href="{{ url("/products/$product->id") }}">
-                                <div class="col-md-4" style="border: 1px solid black;">
-                                    <p>{{ $product->name }}</p>
-                                    <p>{{ $product->mineral }}</p>
+                    @if (count($posts) > 0)
+                        @foreach ($posts as $post)
+                            <a href="{{ url("/research/$post->id") }}">
+                                <div class="col-md-10 col-md-offset-1" style="border: 1px solid black; margin-top: 5px;">
+                                    <p>{{ $post->title }}</p>
                                 </div>
                             </a>
                         @endforeach
                     @else
-                        <p>There are no registered products yet</p>
+                        <p>There are no registered posts yet</p>
                     @endif
 
                 </div>

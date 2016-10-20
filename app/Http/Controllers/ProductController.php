@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Lang;
 use App\Http\Requests;
 
 use App\Product;
+use App\SafetySheet;
+use App\TechSheet;
+use DB;
 
 class ProductController extends Controller {
 
@@ -74,13 +77,23 @@ class ProductController extends Controller {
             $product->mineral = $request->mineral;
             $product->chemical_description = $request->chemical_description;
             $product->chemical_family = $request->chemical_family;
-            if ($request->file('english_sheet')) $product->english_sheet = $request->file('english_sheet')->store('products');
-            if ($request->file('spanish_sheet')) $product->spanish_sheet = $request->file('spanish_sheet')->store('products');
-            $product->tech_sheet = $request->file('tech_sheet')->store('products');
 
             $product->save();
 
-            return redirect ("/product/$product->id");
+            $safety_sheets = new SafetySheet;
+
+            if ($request->file('english_sheet')) $safety_sheets->english_sheet = $request->file('english_sheet')->store('public/products');
+            if ($request->file('spanish_sheet')) $safety_sheets->spanish_sheet = $request->file('spanish_sheet')->store('public/products');
+
+            $product->safety_sheets()->save($safety_sheets);
+
+            $tech_sheet = new TechSheet;
+
+            $tech_sheet->tech_sheet = $request->file('tech_sheet')->store('products');
+
+            $product->tech_sheet()->save($tech_sheet);
+
+            return redirect ("/products/$product->id");
 
         }
         else return back();
@@ -109,9 +122,17 @@ class ProductController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        //
+    public function edit($id) {
+
+        if (Auth::user()->type == 'admin') {
+            $product = Product::find($id);
+
+            return view ('products.edit', [
+                'product' => $product,
+            ]);
+        }
+        return back();
+
     }
 
     /**
@@ -121,9 +142,41 @@ class ProductController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        //
+    public function update(Request $request, $id) {
+        
+        if (Auth::user()->type == 'admin') {
+            
+            $this->validate($request, [
+                'name' => 'required|string|max:255',
+                'category' => 'required|string',
+                'classification' => 'required|string',
+                'mineral' => 'required|string',
+                'chemical_description' => 'required|string',
+                'chemical_family' => 'required|string',
+                'english_sheet' => 'file',
+                'spanish_sheet' => 'file',
+                'tech_sheet' => 'file'
+            ]);
+
+            $product = Product::find($id);
+
+            $product->name = $request->name;
+            $product->category = $request->category;
+            $product->classification = $request->classification;
+            $product->mineral = $request->mineral;
+            $product->chemical_description = $request->chemical_description;
+            $product->chemical_family = $request->chemical_family;
+
+            if ($request->file('english_sheet')) $product->safety_sheets->english_sheet = $request->file('english_sheet')->store('public/products');
+            if ($request->file('spanish_sheet')) $product->safety_sheets->spanish_sheet = $request->file('spanish_sheet')->store('public/products');
+            if ($request->file('tech_sheet')) $product->tech_sheet->tech_sheet = $request->file('tech_sheet')->store('public/products');
+
+            $product->save();
+
+            return redirect ("/products/$product->id");
+
+        }
+
     }
 
     /**
@@ -132,8 +185,17 @@ class ProductController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        //
+    public function destroy($id) {
+        
+        $product = Product::find($id);
+
+        if ($product != null) {
+            $product->safety_sheets->delete();
+            $product->tech_sheet->delete();
+            $product->delete();
+        }
+
+        return redirect ("/products")->with('success', Lang::get('products.deleted'));
+
     }
 }

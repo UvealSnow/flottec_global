@@ -93,7 +93,7 @@ class RegisterController extends Controller
 
     protected function checkEmailBlacklist ($email) {
 
-        $domain = substr(strrchr($email, "@"), 1);
+        $domain = 'anything@'.substr(strrchr($email, "@"), 1);
 
         $matches = DB::table('blacklist')
                     ->where('domain', $domain)
