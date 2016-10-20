@@ -16,7 +16,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     static $password;
 
     return [
-    	'status' => 'blocked',
+    	'status' => 'blocked', 
     	'type' => 'user',
         'name' => $faker->name,
         'company' => $faker->company,
