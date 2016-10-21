@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => 'local',
+    'default' => 's3',
 
     /*
     |--------------------------------------------------------------------------
@@ -56,10 +56,10 @@ return [
 
         's3' => [
             'driver' => 's3',
-            'key' => 'your-key',
-            'secret' => 'your-secret',
-            'region' => 'your-region',
-            'bucket' => 'your-bucket',
+            'key' => 'AKIAJRVZOI7JYXCNAIGQ',
+            'secret' => 'Lj53o09cqmmWaqIbFz6hMVpWHxtKqpjTkNa8GkrG',
+            'region' => 'us-west-1',
+            'bucket' => 'flottecglobal',
         ],
 
     ],

@@ -18,7 +18,7 @@ class DownloadController extends Controller {
 
 	public function download ($folder, $file) { 
 
-		$path = public_path().'/storage/'.$folder.'/'.$file;
+		$path = Storage::url($folder.'/'.$file);
 		$headers = array('Content-Type: application/pdf');
 		if ($folder == 'products') $name = $this->getFileName($folder.'/'.$file).strstr($file, '.');
 		else $name = File::where('file', $folder.'/'.$file)->first()->original_name;

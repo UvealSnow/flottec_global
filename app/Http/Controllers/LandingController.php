@@ -17,6 +17,7 @@ class LandingController extends Controller {
 			}
 			return $this->chooseLanguage();
 		}
+		return view ('welcome');
 
 	}
 

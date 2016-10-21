@@ -25,7 +25,7 @@
                     <p>Chemical family: {{ $product->chemical_family }}</p>
 
                     @if ($product->safety_sheets->english_sheet)
-                    	<p>English safety sheet: <a class="btn btn-xs btn-primary" target="_blank" href="{{ url('download/'.$product->safety_sheets->english_sheet) }}">download</a></p>
+                    	<p>English safety sheet: <a class="btn btn-xs btn-primary" target="_blank" href="{{ Storage::url($product->safety_sheets->english_sheet) }}">download</a></p>
                     @endif
                     @if ($product->safety_sheets->spanish_sheet)
                     	<p>Spanish safety sheet: <a class="btn btn-xs btn-primary" target="_blank" href="{{ url('download/'.$product->safety_sheets->spanish_sheet) }}">download</a></p>

@@ -27,7 +27,7 @@ Route::get('/global-network', 'StaticController@network');
 # functional routes
 
 Route::get('/lang/{language}', 'LanguageController@changeLanguage');
-Route::get('/download/{folder}/{path}', 'DownloadController@download');
+Route::get('/download/public/{folder}/{path}', 'DownloadController@download');
 Route::get('/blocked', 'BlockedController@index');
 Route::put('/blocked/{id}', 'BlockedController@accept');
 Route::delete('/blocked/{id}', 'BlockedController@decline');
