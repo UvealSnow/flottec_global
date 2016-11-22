@@ -3,10 +3,12 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Products</div>
-                <div class="panel-body">
+        <div>
+            <div><br>
+                <div><font color="#1966cb" size="6"><b>RESEARCH AND <br>DEVELOPMENT</b></font><br>
+                <font color="#424242"><br>Here you will be able to find the latest<br>
+                content in Flottec’s site.</font> <br><br></div>
+                <div>
 
                     @if (session('success'))
                         <div class="alert alert-warning">
@@ -15,14 +17,15 @@
                     @endif
 
                     @if (Auth::user() && Auth::user()->type == 'admin')
-                        <a class="btn btn-primary" href="{{ url("/research/create") }}">New post</a> <hr>
+                       <br> <a class="btn btn-primary" href="{{ url("/research/create") }}">New post</a> <hr>
                     @endif
                     
                     @if (count($posts) > 0)
                         @foreach ($posts as $post)
-                            <a href="{{ url("/research/$post->id") }}">
-                                <div class="col-md-10 col-md-offset-1" style="border: 1px solid black; margin-top: 5px;">
-                                    <p>{{ $post->title }}</p>
+                            <!-- <a href="{{ url("/research/$post->id") }}"> -->
+                                <div>
+                                   <font color="black" size="4"><b>{{ $post->title }}</b></font><br>
+                                   <font color="#424242">{{ $post->body }} </font><br><br>
                                 </div>
                             </a>
                         @endforeach
@@ -34,5 +37,7 @@
             </div>
         </div>
     </div>
+    <br><br><div style="margin-left: 1000px;"><font color="#1966cb" size="4"><b>VIEW MORE</b></font></div>
 </div>
 @endsection
+

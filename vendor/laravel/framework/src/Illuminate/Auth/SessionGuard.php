@@ -10,7 +10,6 @@ use Illuminate\Contracts\Auth\UserProvider;
 use Illuminate\Contracts\Auth\StatefulGuard;
 use Symfony\Component\HttpFoundation\Request;
 use Illuminate\Contracts\Auth\SupportsBasicAuth;
-use Illuminate\Support\Facades\Session;
 use Illuminate\Contracts\Cookie\QueueingFactory as CookieJar;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
@@ -358,13 +357,7 @@ class SessionGuard implements StatefulGuard, SupportsBasicAuth
         // If an implementation of UserInterface was returned, we'll ask the provider
         // to validate the user against the given credentials, and if they are in
         // fact valid we'll log the users into the application and return true.
-        // Also added a user status == active, else the login attempt fails
-        if ($this->hasValidCredentials($user, $credentials) && $user->status == 'active') {
-            # This should check if the locale is available and then just pass it 
-            # to the session, should stay like this...
-            if (array_key_exists($user->locale, config('language'))) { 
-                Session::set('applocale', $user->locale);
-            }
+        if ($this->hasValidCredentials($user, $credentials)) {
             if ($login) {
                 $this->login($user, $remember);
             }

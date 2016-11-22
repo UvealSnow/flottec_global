@@ -2,12 +2,18 @@
 	# This is the english language file for the navbar
 
 	return [
-		'contact' => 'Contact us',
-		'global' => 'Global network',
-		'products' => 'Products',
-		'research' => 'Research and development',
-		'register' => 'Register',
-		'logout' => 'Logout',
-		'blacklist' => 'Email blacklist',
-		'blocked' => 'Blocked requests',
+		'home' => 'HOME',
+		'contact' => 'CONTACT US',
+		'global' => 'GLOBAL NETWORK',
+		'products' => 'PRODUCTS',
+		'research' => 'R&D',
+		'register' => 'SIGN UP',
+		'logout' => 'LOG OUT',
+		'blacklist' => 'EMAIL BLACKLIST',
+		'blocked' => 'BLOCKED REQUESTS',
+		'en' => 'En',
+		'es' => 'Es',
+		'sds' => 'SDS/MSDS',
+		'company' => 'COMPANY',
+
 	];

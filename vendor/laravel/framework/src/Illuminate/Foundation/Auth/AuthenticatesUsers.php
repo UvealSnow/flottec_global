@@ -41,7 +41,7 @@ trait AuthenticatesUsers
 
         $credentials = $this->credentials($request);
 
-        if ($this->guard()->attempt($credentials, false, false)) {
+        if ($this->guard()->attempt($credentials, $request->has('remember'))) {
             return $this->sendLoginResponse($request);
         }
 
@@ -111,7 +111,8 @@ trait AuthenticatesUsers
      * @param \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    protected function sendFailedLoginResponse(Request $request) {
+    protected function sendFailedLoginResponse(Request $request)
+    {
         return redirect()->back()
             ->withInput($request->only($this->username(), 'remember'))
             ->withErrors([
