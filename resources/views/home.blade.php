@@ -3,10 +3,11 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="slider"></div>
-        <br><br>
-
+    
+        <div class="simple-ss" id="simple-ss"></div>
         <div>
+        <br>
+
         <font color="black" size="5"><b>What We Do</b></font></font><br><br>
         <p style="white-space: pre-line;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
         dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
@@ -50,4 +51,41 @@
         </div>
     </div>
 </div>
+
+<style>
+/* USUAL STUFF */
+.content { max-width:800px;text-align:left; margin:auto; }
+
+/* THE DIV */
+.simple-ss {
+  width:800px;
+  height:250px;
+  background-color:red;
+  margin:auto;
+  background-image:url("http://www.mediafire.com/convkey/4989/2l919s6cqg2vm826g.jpg");
+  background-position:0;
+  background-repeat:no-repeat;
+  background-size:cover;
+
+/* ANIMATING STUFF */
+  animation-name: slide;
+  animation-duration: 13s;
+  animation-direction: normal;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+/* NOTE CODEPEN AUTOGENERATING -PREFIXES */
+@keyframes slide {
+  0% {background-position:0 0;}
+  16.66% {background-position:0 0;}
+  33.32% {background-position:-800px 0;}
+  49.98% {background-position:-800px 0;}
+  66.64% {background-position:-1600px 0;}
+  83.30% {background-position:-1600px 0;}
+  100% {background-position:0 0;}
+}
+</style>
+
+
 @endsection
