@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
 <div class="container">
     <div class="row" style="margin-left: 50px;">
@@ -14,7 +13,15 @@
                 </div>
             </div>
         </div>
-        <br><br><div style="margin-left: 1000px;"><font color="#1966cb" size="4"><b>VIEW MORE</b></font></div>
-    </div>
+        <br><br><div style="margin-left: 950px;"><font color="#1966cb" size="4"><b>VIEW MORE</b></font></div>
+    </div><br>
+
 @endsection
+
+
+
+
+
+
+
 

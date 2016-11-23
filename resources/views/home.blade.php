@@ -4,7 +4,15 @@
 <div class="container">
     <div class="row">
 
-        <div class="simple-ss" id="simple-ss"></div>
+        <div class="simple-ss" id="simple-ss"><font color="white">
+        <br><br><br><br><br><br>
+        <div class="text">EXCELLENCE<br>
+        Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut </font></div>
+        </div></div>
+
         <br><br><br>
         <div style="margin-left: 65px;">
         <br>
@@ -23,7 +31,7 @@
         <br><br><br>
         <div style="margin-left: 65px;">
         <table><tr>
-        <td><div class="blue-thingy""></div></td><td>&emsp;</td><td><font color="black" size="4"><b>Emergency
+        <td><div class="blue-thingy""><center><img style="margin-top: 15px;" src="images/contact.svg"></center></div></td><td>&emsp;</td><td><font color="black" size="4"><b>Emergency
         Response </b></font></font><br><br><br>
         <p style="white-space: pre-line;">"Lorem ipsum dolor sit amet,
         consectetur adipiscing elit, sed
@@ -32,7 +40,7 @@
         aliqua. Ut enim ad minim
         veniam”</p></td><td>&emsp;</td>
 
-        <td><div class="blue-thingy"></div></td><td>&emsp;</td><td><font color="black" size="4"><b>Global
+        <td><div class="blue-thingy"><center><img style="margin-top: 15px;" src="images/contact.svg"></center></div></td><td>&emsp;</td><td><font color="black" size="4"><b>Global
         Network</b></font></font><br><br><br>
         <p style="white-space: pre-line;">"Lorem ipsum dolor sit amet,
         consectetur adipiscing elit, sed
@@ -41,7 +49,7 @@
         aliqua. Ut enim ad minim
         veniam”</p></td><td>&emsp;</td>
 
-        <td><div class="blue-thingy"></div></td><td>&emsp;</td><td><font color="black" size="4"><b>Training</b></font></font><br><br><br>
+        <td><div class="blue-thingy"><center><img style="margin-top: 15px;" src="images/contact.svg"></center></div></td><td>&emsp;</td><td><font color="black" size="4"><b>Training</b></font></font><br><br><br>
         <p style="white-space: pre-line;">"Lorem ipsum dolor sit amet,
         consectetur adipiscing elit, sed
         do eiusmod tempor incididunt
