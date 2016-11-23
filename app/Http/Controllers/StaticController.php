@@ -16,4 +16,15 @@ class StaticController extends Controller {
 		return view ('static.network');
 	}
 
+	public function company () {
+		return view ('static.company');
+	}
+
+	public function temporal () {
+		return view ('static.temporal');
+	}
+
+	public function returnpage () {
+		return view ('static.return');
+	}
 }

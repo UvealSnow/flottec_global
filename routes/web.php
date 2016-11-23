@@ -23,6 +23,9 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/contact-us', 'StaticController@contact');
 Route::get('/global-network', 'StaticController@network');
+Route::get('/company', 'StaticController@company');
+Route::get('/temporal', 'StaticController@temporal');
+Route::get('/return', 'StaticController@returnpage');
 
 # functional routes
 
@@ -36,4 +39,5 @@ Route::delete('/blocked/{id}', 'BlockedController@decline');
 
 Route::resource('products', 'ProductController');
 Route::resource('research', 'ResearchController');
+// Route::resource('safety_sheets', 'SafetyController');
 Route::resource('blacklist', 'BlacklistController', ['except' => ['show', 'edit', 'update']]);

@@ -2,7 +2,8 @@
 
 @section('content')
 <div class="container">
-    <div><br><br>
+ <div style="margin-left: 585px; margin-top: 260px; z-index:1; position: absolute;"><img src="images/JH.png" width="75%" height="75%"></div>
+    <div>
     <table><tr><td>
         <div class="myoff">
                     <font size="6" color="#424242"> <b>CONTACT US</b> </font><br><br>
@@ -11,7 +12,7 @@
                     services.  <br><br></font>
         </div></td>
 
-        <td><div class="myoff2">
+        <td><div class="myoff2"><br><br>
                     <font size="6" color="#424242"> <b>Flottec</b> </font><br><br>
                     <font color="#424242"> 433 S. Hill Street<br>
                     Jackson Heights, NY 11372<br><br>
@@ -20,7 +21,7 @@
                     <br><br></font>
         </div></td></tr></table>
 
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-8 col-md-offset-2" style="margin-left: 55px;">
             <div>
                 <div>
                      <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">

@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
+    <div class="row" style="margin-left: 50px;">
         <div>
             <div><br>
                 <div><font size="6" color="#424242"> <b>PRODUCTS</b> </font><br><br>
@@ -22,19 +22,25 @@
                     @endif
                     
                     @if (count($products) > 0)
-                    <table><tr>
-                        @foreach ($products as $product)
-                            <td><a class="aprod" STYLE="text-decoration: none" href="{{ url("/products/$product->id") }}">
+                    <table class="spacerows" cellspacing="0"><tr>
+                        @foreach ($products as $i => $product)
+                            @if (($i%3) == 0 && $i != 0 )
+                                </tr><tr></tr><tr>
+                                @endif<td><a class="aprod" STYLE="text-decoration: none" href="{{ url("/products/$product->id") }}">
+                                
                                 <div class="podu">
-                                    <font color="424242"><b>{{ $product->category }}</b></font>
+                                <img src="images/rocks.png">
+                                <br>   
+                                    <h2><b>{{ $product->category }}</b><h2>
                                 </div>
-                            </a></td><td>&emsp;</td>
+
+                            </a></td><td>&emsp;&emsp;</td>
                         @endforeach
                         </tr></table>
                     @else
                         <p>There are no registered products yet</p>
                     @endif
-
+                    <br><br><br>
                 </div>
             </div>
         </div>

@@ -89,10 +89,10 @@
                     </ul>
                     <br><br>
                     <br>
-                    <div style="margin-left: 840px;">
+                    <div style="margin-left: 800px;">
                     <table><tr>
                         <td><div style="background-color: #03387e; width: 35px ; height: 50px;"></div></td><td><a class="small" href="{{ url('/contact-us') }}"><div style="background-color: #1966cb; width: 100px ; height: 50px;"><center><b><font color="white"><br>{{ trans('navbar.contact') }}</font></b></center></div></a></td>
-                        <td>&emsp;</td>
+                        <td></td>
 
                         <td><div style="background-color: #03387e; width: 35px ; height: 50px;"></div></td><td><a class="small" href="{{ url('') }}"><div style="background-color: #1966cb; width: 125px ; height: 50px;"><center><b><font color="white"><br>FLOTTEC MEXICO</font></b></center></div></a></td>
                         </tr></table>
@@ -104,14 +104,19 @@
                     </ul>
                     <br><br> -->
 
-                    <div style="margin-left: 375px;">
+                    <div style="margin-left: 45px;">
                     <table><tr>
-                        <td><a class="small" href="{{ url('/home') }}"><div style="background-color: #424242; height: 50px; width: 120px;"><center><b><font color="white"><br>{{ trans('navbar.home') }}</font></b></center></div></a></td>
-                         <td><a class="small" href="{{ url('/products') }}"><div style="background-color: #424242; height: 50px; width: 120px;"><center><b><font color="white"><br>{{ trans('navbar.products') }}</font></b></center></div></a></td>
-                          <td><a class="small" href="{{ url('/research') }}"><div style="background-color: #424242; height: 50px; width: 120px;"><center><b><font color="white"><br>{{ trans('navbar.research') }}</font></b></center></div></a></td>
-                           <td><a class="small" href="{{ url('/sds-msds') }}"><div style="background-color: #424242; height: 50px; width: 120px;"><center><b><font color="white"><br>{{ trans('navbar.sds') }}</font></b></center></div></a></td>
-                            <td><a class="small" href="{{ url('/global-network') }}"><div style="background-color: #424242; height: 50px; width: 175px;"><center><b><font color="white"><br>{{ trans('navbar.global') }}</font></b></center></div></a></td>
-                             <td><a class="small" href="{{ url('/company') }}"><div style="background-color: #424242; height: 50px; width: 120px;"><center><b><font color="white"><br>{{ trans('navbar.company') }}</font></b></center></div></a></td>
+                        <td><a class="small" href="{{ url('/home') }}"><div class="graybar"><center><b><font color="white"><br>{{ trans('navbar.home') }}</font></b></center></div></a></td>
+
+                        <td><a class="small" href="{{ url('/products') }}"><div class="graybar"><center><b><font color="white"><br>{{ trans('navbar.products') }}</font></b></center></div></a></td>
+
+                        <td><a class="small" href="{{ url('/research') }}"><div class="graybar"><center><b><font color="white"><br>{{ trans('navbar.research') }}</font></b></center></div></a></td>
+
+                        <td><a class="small" href="{{ url('/sds-msds') }}"><div class="graybar"><center><b><font color="white"><br>{{ trans('navbar.sds') }}</font></b></center></div></a></td>
+
+                        <td><a class="small" href="{{ url('/global-network') }}"><div class="graybar"><center><b><font color="white"><br>{{ trans('navbar.global') }}</font></b></center></div></a></td>
+
+                        <td><a class="small" href="{{ url('/company') }}"><div class="graybar"><center><b><font color="white"><br>{{ trans('navbar.company') }}</font></b></center></div></a></td>
                         
                         </tr></table>
                     </div>

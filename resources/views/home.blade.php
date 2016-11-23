@@ -3,9 +3,10 @@
 @section('content')
 <div class="container">
     <div class="row">
-    
+
         <div class="simple-ss" id="simple-ss"></div>
-        <div>
+        <br><br><br>
+        <div style="margin-left: 65px;">
         <br>
 
         <font color="black" size="5"><b>What We Do</b></font></font><br><br>
@@ -20,9 +21,9 @@
         dolores eos qui ratione voluptatem sequi nesciunt.”</p>
         </div>
         <br><br><br>
-        <div>
+        <div style="margin-left: 65px;">
         <table><tr>
-        <td><div style="background-color: #1966cb; width: 35px ; height: 150px;"></div></td><td>&emsp;</td><td><font color="black" size="4"><b>Emergency
+        <td><div class="blue-thingy""></div></td><td>&emsp;</td><td><font color="black" size="4"><b>Emergency
         Response </b></font></font><br><br><br>
         <p style="white-space: pre-line;">"Lorem ipsum dolor sit amet,
         consectetur adipiscing elit, sed
@@ -31,7 +32,7 @@
         aliqua. Ut enim ad minim
         veniam”</p></td><td>&emsp;</td>
 
-        <td><div style="background-color: #1966cb; width: 35px ; height: 150px;"></div></td><td>&emsp;</td><td><font color="black" size="4"><b>Global
+        <td><div class="blue-thingy"></div></td><td>&emsp;</td><td><font color="black" size="4"><b>Global
         Network</b></font></font><br><br><br>
         <p style="white-space: pre-line;">"Lorem ipsum dolor sit amet,
         consectetur adipiscing elit, sed
@@ -40,52 +41,24 @@
         aliqua. Ut enim ad minim
         veniam”</p></td><td>&emsp;</td>
 
-        <td><div style="background-color: #1966cb; width: 35px ; height: 150px;"></div></td><td>&emsp;</td><td><font color="black" size="4"><b>Training</b></font></font><br><br><br>
+        <td><div class="blue-thingy"></div></td><td>&emsp;</td><td><font color="black" size="4"><b>Training</b></font></font><br><br><br>
         <p style="white-space: pre-line;">"Lorem ipsum dolor sit amet,
         consectetur adipiscing elit, sed
         do eiusmod tempor incididunt
         ut labore et dolore magna
         aliqua. Ut enim ad minim
         veniam”</p></td><td>&emsp;</td>
-        </tr></table>
+        </tr></table> 
         </div>
     </div>
 </div>
-
-<style>
-/* USUAL STUFF */
-.content { max-width:800px;text-align:left; margin:auto; }
-
-/* THE DIV */
-.simple-ss {
-  width:800px;
-  height:250px;
-  background-color:red;
-  margin:auto;
-  background-image:url("http://www.mediafire.com/convkey/4989/2l919s6cqg2vm826g.jpg");
-  background-position:0;
-  background-repeat:no-repeat;
-  background-size:cover;
-
-/* ANIMATING STUFF */
-  animation-name: slide;
-  animation-duration: 13s;
-  animation-direction: normal;
-  animation-timing-function: ease;
-  animation-iteration-count: infinite;
-}
-
-/* NOTE CODEPEN AUTOGENERATING -PREFIXES */
-@keyframes slide {
-  0% {background-position:0 0;}
-  16.66% {background-position:0 0;}
-  33.32% {background-position:-800px 0;}
-  49.98% {background-position:-800px 0;}
-  66.64% {background-position:-1600px 0;}
-  83.30% {background-position:-1600px 0;}
-  100% {background-position:0 0;}
-}
-</style>
-
+<br><br>
+<div style="background-color: #333333;"><font color="white"><div style="margin-left: 135px; height: 255px;"><br><h2><b>Latest in the site:</b></h2><br>
+<table><tr>
+<td><div>Security Data Sheet <br><img src="images/latest.png"></div></td><td>&emsp;&emsp;&emsp;</td>
+<td><div>Security Data Sheet <br><img src="images/latest.png"></div></td><td>&emsp;&emsp;&emsp;</td>
+<td><div>Security Data Sheet <br><img src="images/latest.png"></div></td><td>&emsp;&emsp;&emsp;</td>
+</tr></table>
+</div></font></div>
 
 @endsection

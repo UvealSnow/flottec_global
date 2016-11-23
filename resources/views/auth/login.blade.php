@@ -10,7 +10,7 @@
                     continue. <br><br></font>
         </div>
 
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-8 col-md-offset-2" style="margin-left: 55px;">
             <div>
                 <div>
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
