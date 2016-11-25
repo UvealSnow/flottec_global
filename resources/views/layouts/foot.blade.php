@@ -36,12 +36,12 @@
     <p><b>Sitemap</b></p>
     </font>
     <table class="spacerows">
-        <tr><td><font color="white" size="3">GLOBAL NETWORK</font></td><td></td><td><font color="white" size="3">HOME</font></td></tr>
-        <tr><td><font color="white" size="3">COMPANY</font></td><td></td><td><font color="white" size="3">PRODUCTS</font></td></tr>
-        <tr><td><font color="white" size="3">CONTACT</font></td><td></td><td><font color="white" size="3">R&D</font></td></tr>
-        <tr><td><font color="white" size="3">FLOTTEC MEXICO</font></td><td></td><td><font color="white" size="3">SDS/MSDS</font></td></tr>
-        <tr><td></td><td></td><td><font color="white" size="3">PRIVACY POLICY</font></td></tr>
-        <tr><td></td><td><font color="#424242">--------</font></td><td><font color="white" size="3">DISCLAIMER</font></td></tr>
+        <tr><td><font color="white" size="3"><a href="/global-network">GLOBAL NETWORK</a></font></td><td></td><td><font color="white" size="3"><a href="/home">HOME</a></font></td></tr>
+        <tr><td><font color="white" size="3"><a href="/company">COMPANY</a></font></td><td></td><td><font color="white" size="3"><a href="/products">PRODUCTS</a></font></td></tr>
+        <tr><td><font color="white" size="3"><a href="/contact-us">CONTACT</a></font></td><td></td><td><font color="white" size="3"><a href="/research">R&D</a></font></td></tr>
+        <tr><td><font color="white" size="3"><a href="http://flottec.mx/">FLOTTEC MEXICO</a></font></td><td></td><td><font color="white" size="3"><a href="/sds">SDS/MSDS</a></font></td></tr>
+        <tr><td></td><td></td><td><font color="white" size="3"><a href="/privacy">PRIVACY POLICY</a></font></td></tr>
+        <tr><td></td><td><font color="#424242">--------</font></td><td><font color="white" size="3"><a href="/disclaimer">DISCLAIMER</a></font></td></tr>
         </table>
     </div>
     </div>

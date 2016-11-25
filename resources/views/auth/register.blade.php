@@ -13,7 +13,7 @@
         <div class="col-md-8 col-md-offset-2" style="margin-left: 55px;">
             <div>
                 <div>
-                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
+                     <form class="form-horizontal" role="form" method="GET" action="{{ url('/return') }}">
                         {{ csrf_field() }}
                     <font color="#9e9e9e">
                     <table><tr>

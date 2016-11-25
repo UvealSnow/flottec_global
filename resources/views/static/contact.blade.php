@@ -13,7 +13,7 @@
         </div></td>
 
         <td><div class="myoff2"><br><br>
-                    <font size="6" color="#424242"> <b>Flottec</b> </font><br><br>
+                    <font size="6" color="#424242"> <b>FLOTTEC</b> </font><br><br>
                     <font color="#424242"> 433 S. Hill Street<br>
                     Jackson Heights, NY 11372<br><br>
                     Phone Number: +00 0 0000 0000<br>

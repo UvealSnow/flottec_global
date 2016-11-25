@@ -178,6 +178,18 @@ input.contactinput, input[type].contactinput {
   width: 100%;
   height: auto;
 }
+.generated{
+  border-color:#cccccc; 
+  border-style:outset; 
+  border-radius:50px; 
+  border-width:2px; 
+  font-size:16px; 
+  padding:3px; 
+  color:#424242; 
+  box-shadow: -1px 0px 0px 0px rgba(42,42,42,.100);  
+} 
+.generated:focus { outline:none; } 
+}
 /*Slider*/
 .content { max-width:800px;text-align:left; margin:auto; }
 

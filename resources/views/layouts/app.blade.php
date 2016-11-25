@@ -88,13 +88,14 @@
                        
                     </ul>
                     <br><br>
-                    <br>
+                    <br><div style="margin-left: 925px;"><input class="generated" value="" placeholder="Search" id="search" name="search">&emsp;<img src="images/search.svg"></div><br>
+                    
                     <div style="margin-left: 790px;">
                     <table><tr>
                         <td><div style="background-color: #03387e; width: 40px ; height: 50px;"><center><img style="margin-top: 17px;" src="images/contact.svg"><center></div></td><td><a class="small" href="{{ url('/contact-us') }}"><div style="background-color: #1966cb; width: 100px ; height: 50px;"><center><b><font color="white"><br>{{ trans('navbar.contact') }}</font></b></center></div></a></td>
                         <td></td>
 
-                        <td><div style="background-color: #03387e; width: 40px ; height: 50px;"><center><img style="margin-top: 15px;" src="images/mexico-small.svg"></center></div></td><td><a class="small" href="{{ url('') }}"><div style="background-color: #1966cb; width: 125px ; height: 50px;"><center><b><font color="white"><br>FLOTTEC MEXICO</font></b></center></div></a></td>
+                        <td><div style="background-color: #03387e; width: 40px ; height: 50px;"><center><img style="margin-top: 15px;" src="images/mexico-small.svg"></center></div></td><td><a class="small" href="{{ url('http://flottec.mx/') }}"><div style="background-color: #1966cb; width: 125px ; height: 50px;"><center><b><font color="white"><br>FLOTTEC MEXICO</font></b></center></div></a></td>
                         </tr></table>
                     </div>
                     <br>
@@ -112,7 +113,7 @@
 
                         <td><a class="small" href="{{ url('/research') }}"><div class="graybar"><center><b><font color="white"><br>{{ trans('navbar.research') }}</font></b></center></div></a></td>
 
-                        <td><a class="small" href="{{ url('/temporal') }}"><div class="graybar"><center><b><font color="white"><br>{{ trans('navbar.sds') }}</font></b></center></div></a></td>
+                        <td><a class="small" href="{{ url('/sds') }}"><div class="graybar"><center><b><font color="white"><br>{{ trans('navbar.sds') }}</font></b></center></div></a></td>
 
                         <td><a class="small" href="{{ url('/global-network') }}"><div class="graybar"><center><b><font color="white"><br>{{ trans('navbar.global') }}</font></b></center></div></a></td>
 
@@ -130,7 +131,7 @@
 @section('footer')
 @extends('layouts.foot')
 @endsection
-
+<br><br>
 @yield('footer')
     </div>
 

@@ -18,7 +18,7 @@
                     @endif
 
                     @if (Auth::user() && Auth::user()->type == 'admin')
-                        <a href="{{ url("/products/create") }}">Create new</a> <hr>
+                        <a class="btn btn-primary" href="{{ url("/products/create") }}">Create new</a> <hr>
                     @endif
                     
                     @if (count($products) > 0)

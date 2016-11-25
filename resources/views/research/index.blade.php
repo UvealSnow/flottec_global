@@ -43,7 +43,7 @@
             </div>
         </div>
     </div>
-    <br><br><div style="margin-left: 1000px;"><font color="#1966cb" size="4"><b>VIEW MORE</b></font></div>
+    <br><br><div style="margin-left: 1000px;"><font color="#1966cb" size="4"><b><a href="">VIEW MORE</a></b></font></div>
 </div>
 @endsection
 

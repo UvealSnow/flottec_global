@@ -24,7 +24,16 @@ class StaticController extends Controller {
 		return view ('static.temporal');
 	}
 
+	public function privacy () {
+		return view ('static.privacy');
+	}
+
+	public function disclaimer () {
+		return view ('static.disclaimer');
+	}
+
 	public function returnpage () {
 		return view ('static.return');
 	}
+
 }
