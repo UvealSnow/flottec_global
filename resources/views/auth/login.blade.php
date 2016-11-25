@@ -10,7 +10,7 @@
                     continue. <br><br></font>
         </div>
 
-        <div class="col-md-8 col-md-offset-2" style="margin-left: 55px;">
+        <div  class="ml55">
             <div>
                 <div>
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
@@ -44,23 +44,15 @@
                             </div>
                         </div>
                       </font>
-                       <!--  <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember"> Remember Me
-                                    </label>
-                                </div>
-                            </div>
-                        </div> -->
+
                         <br>
                         <div class="form-group">
                             <div>
-                                <button type="submit" class="btn-blue" style="width: 175px;">
+                                <button type="submit" class="btn-blue short">
                                     LOG IN
                                 </button>
                                 <br><br>
-                                <a href="/register" style="margin-left: 60px;"> <font color="#9f9f99" >SIGN UP</font> </a>
+                                <a href="/register" class="ml60"> <font color="#9f9f99" >SIGN UP</font> </a>
 
                                 <!-- <a class="btn btn-link" href="{{ url('/password/reset') }}">
                                     Forgot Your Password?

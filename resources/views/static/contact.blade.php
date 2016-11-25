@@ -21,7 +21,7 @@
                     <br><br></font>
         </div></td></tr></table>
 
-        <div class="col-md-8 col-md-offset-2" style="margin-left: 55px;">
+        <div class="ml55">
             <div>
                 <div>
                      <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
@@ -102,7 +102,7 @@
                         <br>
                         <div class="form-group">
                             <div>
-                                <button type="submit" class="btn-blue" style="width: 190px;">
+                                <button type="submit" class="btn-blue med">
                                     SEND
                                 </button>
                                 <br><br>

@@ -2,12 +2,12 @@
 
 @section('content')
 <div class="container">
-    <div class="row" style="margin-left: 50px;">
-        <div>
+    <div class="row">
+        <div class="ml50">
             <div><br>
                 <div><font color="#1966cb" size="6"><b>COMPANY</b></font><br>
                 <font color="#424242"><br><h2><font color="black">What We Do</font></h2><br>
-                <div style="max-width: 75%;">
+                <div class="mxwi75">
                 Lorem ipsum dolor sit amet
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
@@ -21,7 +21,7 @@
                 <div>
 
                 <font color="#424242"><h2><font color="black">OUR VALUES</font></h2><br>
-                <div style="max-width: 75%;">
+                <div class="mxwi75">
                 Lorem ipsum dolor sit amet
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
@@ -35,7 +35,7 @@
                 <div>
 
                 <font color="#424242"><h2><font color="black">MISSION</font></h2><br>
-                <div style="max-width: 75%;">
+                <div class="mxwi75">
                 Lorem ipsum dolor sit amet
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
@@ -49,7 +49,7 @@
                 <div>
 
                 <font color="#424242"><h2><font color="black">VISION</font></h2><br>
-                <div style="max-width: 75%;">
+                <div class="mxwi75">
                 Lorem ipsum dolor sit amet
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex

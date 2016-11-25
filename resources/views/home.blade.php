@@ -14,7 +14,7 @@
         </div></div>
 
         <br><br><br>
-        <div style="margin-left: 65px;">
+        <div class="ml65">
         <br>
 
         <font color="black" size="5"><b>What We Do</b></font></font><br><br>
@@ -29,7 +29,7 @@
         dolores eos qui ratione voluptatem sequi nesciunt.”</p>
         </div>
         <br><br><br>
-        <div style="margin-left: 65px;">
+        <div class="ml65">
         <table><tr>
         <td><div class="blue-thingy""><center><img style="margin-top: 15px;" src="images/contact.svg"></center></div></td><td>&emsp;</td><td><font color="black" size="4"><b>Emergency
         Response </b></font></font><br><br><br>
@@ -61,7 +61,7 @@
     </div>
 </div>
 <br><br>
-<div style="background-color: #333333;"><font color="white"><div style="margin-left: 135px; height: 255px;"><br><h2><b>Latest in the site:</b></h2><br>
+<div style="background-color: #333333;"><font color="white"><div class="ml135"><br><h2><b>Latest in the site:</b></h2><br>
 <table><tr>
 <td><div>Security Data Sheet <br><img src="images/latest.png"></div></td><td>&emsp;&emsp;&emsp;</td>
 <td><div>Security Data Sheet <br><img src="images/latest.png"></div></td><td>&emsp;&emsp;&emsp;</td>

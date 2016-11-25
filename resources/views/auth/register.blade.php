@@ -10,7 +10,7 @@
                     continue. <br><br></font>
         </div>
 
-        <div class="col-md-8 col-md-offset-2" style="margin-left: 55px;">
+        <div class="ml55">
             <div>
                 <div>
                      <form class="form-horizontal" role="form" method="GET" action="{{ url('/return') }}">
@@ -77,7 +77,7 @@
                         <br>
                         <div class="form-group">
                             <div>
-                                <button type="submit" class="btn-blue" style="width: 380px;">
+                                <button type="submit" class="btn-blue long">
                                     SIGN UP
                                 </button>
                                 <br><br>

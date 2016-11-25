@@ -2,8 +2,8 @@
 
 @section('content')
 <div class="container">
-    <div class="row" style="margin-left: 50px;">
-        <div>
+    <div class="row">
+        <div class="ml50">
             <div><br>
                 <div><font color="#1966cb" size="6"><b>GLOBAL <br>NETWORK</b></font><br>
                 <font color="#424242"><br>We pride ourselves in being able to provide<br>

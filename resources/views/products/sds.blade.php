@@ -1,8 +1,8 @@
 @extends('layouts.app')
 @section('content')
 <div class="container">
-    <div class="row" style="margin-left: 50px;">
-        <div>
+    <div class="row">
+        <div class="ml50">
             <div><br>
                 <div><font color="#1966cb" size="6"><b>SAFETY DATA<br>SHEETS / MSDS</b></font><br>
                 <font color="#424242"><br>Here you will be able to find the latest SDS
@@ -26,10 +26,10 @@
                                 @endif
                                 <td><div style="border-style: solid; border-right: hidden;">
                                 
-                                <br><font color="#424242" size="3">&emsp;&emsp;Product:&emsp;&emsp;</font><br>
-                                    <b><font color="black" size="4">&emsp;&emsp;{{ $product->name }}&emsp;&emsp;</font></b><br><br>
-                                    <font color="#424242" size="3">&emsp;&emsp;Type:&emsp;&emsp;</font><br>
-                                    <b><font color="black" size="4">&emsp;&emsp;{{ $product->category }}&emsp;&emsp;</font></b><br><br></td></div><td><div style="border-right: solid;">
+                                <br><font color="#424242" class="fsize3">&emsp;&emsp;Product:&emsp;&emsp;</font><br>
+                                    <b><font color="black" class="fsize4">&emsp;&emsp;{{ $product->name }}&emsp;&emsp;</font></b><br><br>
+                                    <font color="#424242" class="fsize3">&emsp;&emsp;Type:&emsp;&emsp;</font><br>
+                                    <b><font color="black" class="fsize4">&emsp;&emsp;{{ $product->category }}&emsp;&emsp;</font></b><br><br></td></div><td><div style="border-right: solid;">
 
                     <table>
 
@@ -56,7 +56,7 @@
                 </div>
             </div>
         </div>
-        <br><br><div style="margin-left: 950px;"><font color="#1966cb" size="4"><b><a href="">VIEW MORE</a></b></font></div>
+        <br><br><div class="ml1000"><font color="#1966cb" size="4"><b><a href="">VIEW MORE</a></b></font></div>
     </div><br>
 
 @endsection

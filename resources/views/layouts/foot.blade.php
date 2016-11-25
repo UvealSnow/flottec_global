@@ -27,12 +27,12 @@
   <div><br>
     <font color="white" size="5">
 
-    <br><div style="margin-left: 150px;">
+    <br><div class="part">
     <p><b>Flottec Partners</b></p>
     <img src="images/partners.png">
     </div>
 
-    <div style="margin-left: 750px; margin-top: -730px; z-index:1; position: absolute;">
+    <div class="part2">
     <p><b>Sitemap</b></p>
     </font>
     <table class="spacerows">

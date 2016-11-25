@@ -38,7 +38,7 @@
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
                         <!-- {{ config('app.name', 'Laravel') }} -->
-                        <img src="images/flottec-logo.svg">
+                        <img class="logo" src="images/flottec-logo.svg">
                     </a>
                 </div>
 

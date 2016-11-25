@@ -2,9 +2,9 @@
 
 @section('content')
 <div class="container">
-    <div class="row" style="margin-left: 50px;">
+    <div class="row">
         <div>
-            <div><br>
+            <div class="ml50"><br>
                 <div><font size="6" color="#424242"> <b>PRODUCTS</b> </font><br><br>
                  <font color="#424242"> Flottec has specialty and commodity chemicals to meet<br>
                  your needs. Please click on the category of products your<br>
@@ -30,9 +30,9 @@
                                 
                                 <div class="podu">
                                 <img src="images/rocks.png">
-                                <br>   
+                                <br> <center>  
                                     <h2><b>{{ $product->category }}</b><h2>
-                                </div>
+                                </center></div>
 
                             </a></td><td>&emsp;&emsp;</td>
                         @endforeach

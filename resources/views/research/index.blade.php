@@ -2,8 +2,8 @@
 
 @section('content')
 <div class="container">
-    <div class="row" style="margin-left: 50px;">
-        <div>
+    <div class="row">
+        <div class="ml50">
             <div><br>
                 <div><font color="#1966cb" size="6"><b>RESEARCH AND <br>DEVELOPMENT</b></font><br>
                 <font color="#424242"><br>Here you will be able to find the latest<br>
@@ -26,7 +26,7 @@
                                 <div>
                                 <tr>
                                 <td><img src="images/something.png"></td><td>&emsp;</td>
-                                <td> <div style="max-width: 40%;"><font color="black" size="4"><b>{{ $post->title }}</b></font><br>
+                                <td> <div class="mxwi40"><font color="black" size="4"><b>{{ $post->title }}</b></font><br>
                                      <font color="#424242">{{ $post->body }} </font><br><br>
                                     Request this content by sending a mail to
                                     <font color="blue">service@flottec.com</font></div> </td>
@@ -43,7 +43,7 @@
             </div>
         </div>
     </div>
-    <br><br><div style="margin-left: 1000px;"><font color="#1966cb" size="4"><b><a href="">VIEW MORE</a></b></font></div>
+    <br><br><div class="ml1000"><font color="#1966cb" size="4"><b><a href="">VIEW MORE</a></b></font></div>
 </div>
 @endsection
 
