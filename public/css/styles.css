@@ -108,43 +108,29 @@ input, input[type] {
     font-size: 18px;
 }
 
-input.contactarea, input[type].contactarea { 
-    font-family: OpenSans-Bold;  
-    padding:3px; 
-    font-size:16px; 
-    border-width:1px; 
-    border-color:#cccccc; 
-    border-style:solid; 
-    color:#9e9e9e;
-    width: 408px;
-    height: 115px;
-    font-size: 18px;
-}
-input.contactinput, input[type].contactinput {   
-    font-family: OpenSans-Bold;
-    padding:3px; 
-    font-size:16px; 
-    border-width:1px; 
-    border-color:#cccccc; 
-    border-style:solid; 
-    color:#9e9e9e;
-    width: 190px;
-    font-size: 18px;
-}
-
-
 /*---------------------------*/
 /*Responsiveness*/
 
 @media screen and (min-width: 0px) and (max-width: 699px) {
+
+.searchtop {
+  margin-left: 0px;
+}
+.bluetop {
+  margin-left: 0px;
+}
+.graytop {
+  margin-left: 0px;
+}
+
 .fsize6 {
   font-size: 20px;
 }
 .fsize3 {
-  font-size: 10px;
+  font-size: 12px;
 }
 .fsize4 {
-  font-size: 12px;
+  font-size: 14px;
 }
 .footer {
   background-color: #424242;
@@ -223,7 +209,8 @@ input.contactinput, input[type].contactinput {
 }
 .myoff2 {
     font-family: OpenSans-Bold;
-    margin-left: 175px;
+    margin-left: 5px;
+    margin-top: 0px;
 }
 
 .part {
@@ -231,6 +218,42 @@ input.contactinput, input[type].contactinput {
 }
 .part2 {
   margin-left: 90px; margin-top: 20px; z-index:1; position: absolute;
+}
+
+.flottec_map {
+  margin-left: 5px; 
+  margin-top: 750px; 
+  z-index:1; 
+  position: absolute;
+}
+
+input.contactarea, input[type].contactarea { 
+    font-family: OpenSans-Bold;  
+    padding:3px; 
+    font-size:14px; 
+    border-width:1px; 
+    border-color:#cccccc; 
+    border-style:solid; 
+    color:#9e9e9e;
+    width: 365px;
+    height: 95px;
+    font-size: 16px;
+}
+input.contactinput, input[type].contactinput {   
+    font-family: OpenSans-Bold;
+    padding:3px; 
+    font-size:14px; 
+    border-width:1px; 
+    border-color:#cccccc; 
+    border-style:solid; 
+    color:#9e9e9e;
+    width: 170px;
+    font-size: 16px;
+}
+
+.map {
+  width: 65%; 
+  height: auto;
 }
 
 /*Slider*/
@@ -273,14 +296,25 @@ input.contactinput, input[type].contactinput {
 }
 
 @media screen and (min-width: 700px) and (max-width: 1000px) {
+
+.searchtop {
+  margin-left: 510px;
+}
+.bluetop {
+  margin-left: 420px;
+}
+.graytop {
+  margin-left: 15px;
+}
+
 .fsize6 {
   font-size: 28px;
 }
 .fsize3 {
-  font-size: 16px;
+  font-size: 14px;
 }
 .fsize4 {
-  font-size: 18px;
+  font-size: 16px;
 }
 .footer {
   background-color: #424242;
@@ -359,7 +393,8 @@ input.contactinput, input[type].contactinput {
 }
 .myoff2 {
     font-family: OpenSans-Bold;
-    margin-left: 175px;
+    margin-left: 5px;
+    margin-top: 0px;
 }
 
 .part {
@@ -367,6 +402,42 @@ input.contactinput, input[type].contactinput {
 }
 .part2 {
   margin-left: 180px; margin-top: 20px; z-index:1; position: absolute;
+}
+
+.flottec_map {
+  margin-left: 5px; 
+  margin-top: 765px; 
+  z-index:1; 
+  position: absolute;
+}
+
+input.contactarea, input[type].contactarea { 
+    font-family: OpenSans-Bold;  
+    padding:3px; 
+    font-size:16px; 
+    border-width:1px; 
+    border-color:#cccccc; 
+    border-style:solid; 
+    color:#9e9e9e;
+    width: 408px;
+    height: 115px;
+    font-size: 18px;
+}
+input.contactinput, input[type].contactinput {   
+    font-family: OpenSans-Bold;
+    padding:3px; 
+    font-size:16px; 
+    border-width:1px; 
+    border-color:#cccccc; 
+    border-style:solid; 
+    color:#9e9e9e;
+    width: 190px;
+    font-size: 18px;
+}
+
+.map {
+  width: 65%; 
+  height: auto;
 }
 
 /*Slider*/
@@ -410,6 +481,16 @@ input.contactinput, input[type].contactinput {
 }
 
 @media screen and (min-width: 1001px) and (max-width: 2000px) {
+
+.searchtop {
+  margin-left: 915px;
+}
+.bluetop {
+  margin-left: 790px;
+}
+.graytop {
+  margin-left: 45px;
+}
 
 .fsize6 {
   font-size: 32px;
@@ -494,7 +575,9 @@ input.contactinput, input[type].contactinput {
 }
 .myoff2 {
     font-family: OpenSans-Bold;
-    margin-left: 300px;
+    margin-left: 610px;
+    z-index:1; 
+    margin-top: -585px; 
 }
 .part {
   margin-left: 150px;
@@ -503,6 +586,41 @@ input.contactinput, input[type].contactinput {
   margin-left: 750px; margin-top: -730px; z-index:1; position: absolute;
 }
 
+.flottec_map {
+  margin-left: 650px; 
+  margin-top: 225px; 
+  z-index:1; 
+  position: absolute;
+}
+
+input.contactarea, input[type].contactarea { 
+    font-family: OpenSans-Bold;  
+    padding:3px; 
+    font-size:16px; 
+    border-width:1px; 
+    border-color:#cccccc; 
+    border-style:solid; 
+    color:#9e9e9e;
+    width: 408px;
+    height: 115px;
+    font-size: 18px;
+}
+input.contactinput, input[type].contactinput {   
+    font-family: OpenSans-Bold;
+    padding:3px; 
+    font-size:16px; 
+    border-width:1px; 
+    border-color:#cccccc; 
+    border-style:solid; 
+    color:#9e9e9e;
+    width: 190px;
+    font-size: 18px;
+}
+
+.map {
+  width: 75%; 
+  height: auto;
+}
 /*Slider*/
 .content { max-width:800px;text-align:left; margin:auto; }
 

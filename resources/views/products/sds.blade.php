@@ -26,21 +26,21 @@
                                 @endif
                                 <td><div style="border-style: solid; border-right: hidden;">
                                 
-                                <br><font color="#424242" class="fsize3">&emsp;&emsp;Product:&emsp;&emsp;</font><br>
+                                <br>&emsp;&emsp;<font color="#424242" class="fsize3">Product:</font>&emsp;&emsp;<br>
                                     <b><font color="black" class="fsize4">&emsp;&emsp;{{ $product->name }}&emsp;&emsp;</font></b><br><br>
-                                    <font color="#424242" class="fsize3">&emsp;&emsp;Type:&emsp;&emsp;</font><br>
+                                    &emsp;&emsp;<font color="#424242" class="fsize3">Type:</font>&emsp;&emsp;<br>
                                     <b><font color="black" class="fsize4">&emsp;&emsp;{{ $product->category }}&emsp;&emsp;</font></b><br><br></td></div><td><div style="border-right: solid;">
 
                     <table>
 
                     @if ($product->safety_sheets->english_sheet)
-                       <tr> <td><p>&emsp;&emsp;English safety sheet: </p></td><td>&emsp;&emsp;</td><td><a class="btn btn-xs btn-primary" target="_blank" href="{{ Storage::url($product->safety_sheets->english_sheet) }}">Download</a>&emsp;&emsp;<td></tr>
+                       <tr> <td><p>&emsp;&emsp;<font color="#424242" class="fsize3">English safety sheet: </font></p></td><td>&emsp;&emsp;</td><td><a class="btn btn-xs btn-primary" target="_blank" href="{{ Storage::url($product->safety_sheets->english_sheet) }}">Download</a>&emsp;&emsp;<td></tr>
                     @endif
                     @if ($product->safety_sheets->spanish_sheet)
-                        <tr> <td><p>&emsp;&emsp;Spanish safety sheet: </p></td><td>&emsp;&emsp;</td><td><a class="btn btn-xs btn-primary" target="_blank" href="{{ url('download/'.$product->safety_sheets->spanish_sheet) }}">Download</a>&emsp;&emsp;</td></tr>
+                        <tr> <td><p>&emsp;&emsp;<font color="#424242" class="fsize3">Spanish safety sheet: </font></p></td><td>&emsp;&emsp;</td><td><a class="btn btn-xs btn-primary" target="_blank" href="{{ url('download/'.$product->safety_sheets->spanish_sheet) }}">Download</a>&emsp;&emsp;</td></tr>
                     @endif
 
-                    <tr> <td><p>&emsp;&emsp;Tech sheet: </p></td><td>&emsp;&emsp;</td><td><a class="btn btn-xs btn-primary" target="_blank" href="{{ url('/download/'.$product->tech_sheet->tech_sheet) }}">Download</a>&emsp;&emsp;</td></tr>
+                    <tr> <td><p>&emsp;&emsp;<font color="#424242" class="fsize3">Tech sheet: </font></p></td><td>&emsp;&emsp;</td><td><a class="btn btn-xs btn-primary" target="_blank" href="{{ url('/download/'.$product->tech_sheet->tech_sheet) }}">Download</a>&emsp;&emsp;</td></tr>
 
                     </div></table>
                     

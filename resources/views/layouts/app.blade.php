@@ -88,9 +88,9 @@
                        
                     </ul>
                     <br><br>
-                    <br><div style="margin-left: 925px;"><input class="generated" value="" placeholder="Search" id="search" name="search">&emsp;<img src="images/search.svg"></div><br>
+                    <br><div class="searchtop"><input class="generated" value="" placeholder="Search" id="search" name="search">&emsp;<img src="images/search.svg"></div><br>
                     
-                    <div style="margin-left: 790px;">
+                    <div class="bluetop">
                     <table><tr>
                         <td><div style="background-color: #03387e; width: 40px ; height: 50px;"><center><img style="margin-top: 17px;" src="images/contact.svg"><center></div></td><td><a class="small" href="{{ url('/contact-us') }}"><div style="background-color: #1966cb; width: 100px ; height: 50px;"><center><b><font color="white"><br>{{ trans('navbar.contact') }}</font></b></center></div></a></td>
                         <td></td>
@@ -105,7 +105,7 @@
                     </ul>
                     <br><br> -->
 
-                    <div style="margin-left: 45px;">
+                    <div class="graytop">
                     <table><tr>
                         <td><a class="small" href="{{ url('/home') }}"><div class="graybar"><center><b><font color="white"><br>{{ trans('navbar.home') }}</font></b></center></div></a></td>
 

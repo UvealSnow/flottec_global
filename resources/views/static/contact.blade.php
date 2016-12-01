@@ -2,23 +2,18 @@
 
 @section('content')
 <div class="container">
- <div style="margin-left: 585px; margin-top: 260px; z-index:1; position: absolute;"><img src="images/JH.png" width="75%" height="75%"></div>
+ <div class="flottec_map"><img src="images/JH.png" class="map"></div>
     <div>
     <table><tr><td>
         <div class="myoff">
-                    <font size="6" color="#424242"> <b>CONTACT US</b> </font><br><br>
+                    <font class="fsize6" color="#424242"> <b>CONTACT US</b> </font><br><br>
                     <font color="#424242"> Call us or fill out this form to request <br>
                     estimates, or information about our<br>
                     services.  <br><br></font>
         </div></td>
 
         <td><div class="myoff2"><br><br>
-                    <font size="6" color="#424242"> <b>FLOTTEC</b> </font><br><br>
-                    <font color="#424242"> 433 S. Hill Street<br>
-                    Jackson Heights, NY 11372<br><br>
-                    Phone Number: +00 0 0000 0000<br>
-                    Email: service@flottec.com
-                    <br><br></font>
+                   
         </div></td></tr></table>
 
         <div class="ml55">
@@ -105,7 +100,16 @@
                                 <button type="submit" class="btn-blue med">
                                     SEND
                                 </button>
-                                <br><br>
+
+        <td><div class="myoff2"><br><br>
+                    <font class="fsize6" color="#424242"> <b>FLOTTEC</b> </font><br><br>
+                    <font color="#424242"> 433 S. Hill Street<br>
+                    Jackson Heights, NY 11372<br><br>
+                    Phone Number: +00 0 0000 0000<br>
+                    Email: service@flottec.com
+                    <br><br></font>
+        </div></td></tr></table>
+                                <br><br><br><br><br><br><br>
 
                             </div>
                         </div>
