@@ -1,0 +1,13 @@
+[X] Make:Model Contact
+	name
+	company
+	address 
+	email
+	msg
+
+[] Make:controller ContactController
+
+[] Make:mailable ContactRecieved
+
+[] Change storage to local
+

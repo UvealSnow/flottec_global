@@ -58,7 +58,7 @@
                             <li><a class="small" href="{{ url('/login') }}">Login</a></li>
                             <li><a class="small" href="{{ url('/register') }}">{{ trans('navbar.register') }}</a></li>
                         @else
-                            @if (Auth::user()->type)
+                            @if (Auth::user()->type == 'admin')
                                 <li><a class="small" href="{{ url('/blacklist') }}">{{ trans('navbar.blacklist') }}</a></li>
                                 <li><a class="small" href="{{ url('/blocked') }}">{{ trans('navbar.blocked') }}</a></li>
                             @endif
@@ -70,9 +70,7 @@
 
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
-                                        <a class="small" href="{{ url('/logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                        <a class="small" href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                             {{ trans('navbar.logout') }}
                                         </a>
 

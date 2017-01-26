@@ -17,6 +17,9 @@ class LandingController extends Controller {
 			}
 			return $this->chooseLanguage();
 		}
+		elseif (Auth::user()->status != 'active') {
+			Auth::logout();
+		}
 		return view ('welcome');
 
 	}
