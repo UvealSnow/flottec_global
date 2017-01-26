@@ -1,20 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Choose your language</div>
-
-                        <div class="row">
-                            <div class="col-md-4 col-md-offset-2">
-                                <p><a href="{{ url('/lang/en') }}">English</a></p>
-                            </div>
-
-                            <div class="col-md-4 ">
-                                <p><a href="{{ url('/lang/es') }}">Espanish</a></p>
-                            </div>
+    <div>
+        <div>
+        <!-- <img src="../../images/flottec-logo.svg"> -->
+            <div>
+                <div>
+                        <br><br><br><br><br><div><center>
+                        <table center><tr>
+                            <td><div class="box blue"></div><div class="box2 red"></div><div class="box2 white"></div><div class="box2 red"></div><div class="box2 white"></div><div class="box2 red"></div><div class="box2 white"></div><div class="box2 red"></div><div class="box2 white"></td><td><font color="#f5f8fa">---</font></td><td><div>
+                                <p><a href="{{ url('/lang/en') }}"><font class="fsize6" color="black"><b>Go to <br>Flottec <br>USA</b></font></a></p>
+                            </div></td>
+<td><font color="#f5f8fa">-------------------</font></td>
+                            <td><div>
+                                <p><a href="{{ url('/lang/es') }}"><font color="black" class="fsize6"><b>Go to <br>Flottec <br>México</b></font></a></p>
+                            </div></td><td><font color="#f5f8fa">---</font></td><td><div class="box green"></div><div class="box white"></div><div class="box red2"></div></td>
+                        </tr></table>
                         </div>
 
                 </div>
@@ -22,3 +23,9 @@
         </div>
     </div>
 @endsection
+
+
+<style>
+
+</style>
+

@@ -3,10 +3,13 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Products</div>
-                <div class="panel-body">
+        <div>
+            <div class="ml50"><br>
+                <div><font size="6" color="#424242"> <b>PRODUCTS</b> </font><br><br>
+                 <font color="#424242"> Flottec has specialty and commodity chemicals to meet<br>
+                 your needs. Please click on the category of products your<br>
+                 are interested in for further information.   <br><br></font></div>
+           
 
                     @if (session('success'))
                         <div class="alert alert-warning">
@@ -15,25 +18,33 @@
                     @endif
 
                     @if (Auth::user() && Auth::user()->type == 'admin')
-                        <a href="{{ url("/products/create") }}">Create new</a> <hr>
+                        <a class="btn btn-primary" href="{{ url("/products/create") }}">Create new</a> <hr>
                     @endif
                     
                     @if (count($products) > 0)
-                        @foreach ($products as $product)
-                            <a href="{{ url("/products/$product->id") }}">
-                                <div class="col-md-4" style="border: 1px solid black;">
-                                    <p>{{ $product->name }}</p>
-                                    <p>{{ $product->mineral }}</p>
-                                </div>
-                            </a>
+                    <table class="spacerows" cellspacing="0"><tr>
+                        @foreach ($products as $i => $product)
+                            @if (($i%3) == 0 && $i != 0 )
+                                </tr><tr></tr><tr>
+                                @endif<td><a class="aprod" STYLE="text-decoration: none" href="{{ url("/products/$product->id") }}">
+                                
+                                <div class="podu">
+                                <img src="images/rocks.png">
+                                <br> <center>  
+                                    <h2><b>{{ $product->category }}</b><h2>
+                                </center></div>
+
+                            </a></td><td>&emsp;&emsp;</td>
                         @endforeach
+                        </tr></table>
                     @else
                         <p>There are no registered products yet</p>
                     @endif
-
+                    <br><br><br>
                 </div>
             </div>
         </div>
     </div>
 </div>
 @endsection
+

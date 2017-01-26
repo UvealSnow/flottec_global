@@ -60,5 +60,11 @@ class DatabaseSeeder extends Seeder
 
         ]);
 
+        // DB::table('products')->insert([
+        //     'id' => '1',
+        //     'name' => 'Product 1',
+        //     'mineral' => 'Mineral 1',
+        // ]);
+
     }
 }

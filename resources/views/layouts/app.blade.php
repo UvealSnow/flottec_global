@@ -14,6 +14,8 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
     <link href="/css/app.css" rel="stylesheet">
     <script src="/js/app.js"></script>
+    <link href="/css/styles.css" rel="stylesheet">
+
 
     <!-- Scripts -->
     <script>
@@ -23,7 +25,6 @@
     </script>
 </head>
 <body>
-    
     <div class="navigation">
         <div class="nav-first">  
             <a class="logo" href="{{ url('/') }}">
@@ -50,6 +51,7 @@
                                     onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
                                     {{ trans('navbar.logout') }}
+
                                 </a>
 
                                 <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
@@ -60,6 +62,7 @@
                         </ul>
                     </li>
                 @endif
+
             </div>
         </div>  
         <div class="nav-second">
