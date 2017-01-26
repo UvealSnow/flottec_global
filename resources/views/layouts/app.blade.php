@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
 
     <!-- Scripts -->
     <script>
@@ -36,7 +37,8 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        <!-- {{ config('app.name', 'Laravel') }} -->
+                        <img class="logo" src="images/flottec-logo.svg">
                     </a>
                 </div>
 
@@ -48,17 +50,15 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a class="small" href="{{ url('/contact-us') }}">{{ trans('navbar.contact') }}</a></li>
-                        <li><a class="small" href="{{ url('/global-network') }}">{{ trans('navbar.global') }}</a></li>
-                        <li><a class="small" href="{{ url('/products') }}">{{ trans('navbar.products') }}</a></li>
-                        <li><a class="small" href="{{ url('/research') }}">{{ trans('navbar.research') }}</a></li>
+
                         <!-- Authentication Links -->
                         @if (Auth::guest())
                             
-                            <li><a class="small" href="{{ url('/login') }}">Login</a></li>
-                            <li><a class="small" href="{{ url('/register') }}">{{ trans('navbar.register') }}</a></li>
+                            
+                            <li><a class="small" href="{{ url('/register') }}"><b>{{ trans('navbar.register') }}</b></a></li>
+                            <li><a class="small" href="{{ url('/login') }}"><b><font color="#1966cb">LOG IN</font></b></a></li>
                         @else
-                            @if (Auth::user()->type)
+                            @if (Auth::user()->type == 'admin')
                                 <li><a class="small" href="{{ url('/blacklist') }}">{{ trans('navbar.blacklist') }}</a></li>
                                 <li><a class="small" href="{{ url('/blocked') }}">{{ trans('navbar.blocked') }}</a></li>
                             @endif
@@ -70,9 +70,7 @@
 
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
-                                        <a class="small" href="{{ url('/logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                        <a class="small" href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                             {{ trans('navbar.logout') }}
                                         </a>
 
@@ -83,12 +81,56 @@
                                 </ul>
                             </li>
                         @endif
+
+                        <li><a class="small" href="{{ url('') }}"><b><font color="#1966cb">{{ trans('navbar.en') }} <img src="images/us.png"> / {{ trans('navbar.es') }} <img src="images/mx.png"></font></b></a></li>
+                       
                     </ul>
+                    <br><br>
+                    <br><div class="searchtop"><input class="generated" value="" placeholder="Search" id="search" name="search">&emsp;<img src="images/search.svg"></div><br>
+                    
+                    <div class="bluetop">
+                    <table><tr>
+                        <td><div style="background-color: #03387e; width: 40px ; height: 50px;"><center><img style="margin-top: 17px;" src="images/contact.svg"><center></div></td><td><a class="small" href="{{ url('/contact-us') }}"><div style="background-color: #1966cb; width: 100px ; height: 50px;"><center><b><font color="white"><br>{{ trans('navbar.contact') }}</font></b></center></div></a></td>
+                        <td></td>
+
+                        <td><div style="background-color: #03387e; width: 40px ; height: 50px;"><center><img style="margin-top: 15px;" src="images/mexico-small.svg"></center></div></td><td><a class="small" href="{{ url('http://flottec.mx/') }}"><div style="background-color: #1966cb; width: 125px ; height: 50px;"><center><b><font color="white"><br>FLOTTEC MEXICO</font></b></center></div></a></td>
+                        </tr></table>
+                    </div>
+                    <br>
+
+                    <!-- <ul class="nav navbar-nav navbar-right">
+                        <li><a class="small" href="{{ url('') }}"><b><font color="#1966cb">SEARCH</font></b></a></li> 
+                    </ul>
+                    <br><br> -->
+
+                    <div class="graytop">
+                    <table><tr>
+                        <td><a class="small" href="{{ url('/home') }}"><div class="graybar"><center><b><font color="white"><br>{{ trans('navbar.home') }}</font></b></center></div></a></td>
+
+                        <td><a class="small" href="{{ url('/products') }}"><div class="graybar"><center><b><font color="white"><br>{{ trans('navbar.products') }}</font></b></center></div></a></td>
+
+                        <td><a class="small" href="{{ url('/research') }}"><div class="graybar"><center><b><font color="white"><br>{{ trans('navbar.research') }}</font></b></center></div></a></td>
+
+                        <td><a class="small" href="{{ url('/sds') }}"><div class="graybar"><center><b><font color="white"><br>{{ trans('navbar.sds') }}</font></b></center></div></a></td>
+
+                        <td><a class="small" href="{{ url('/global-network') }}"><div class="graybar"><center><b><font color="white"><br>{{ trans('navbar.global') }}</font></b></center></div></a></td>
+
+                        <td><a class="small" href="{{ url('/company') }}"><div class="graybar"><center><b><font color="white"><br>{{ trans('navbar.company') }}</font></b></center></div></a></td>
+                        
+                        </tr></table>
+                    </div>
+                    <br>
                 </div>
             </div>
         </nav>
 
-        @yield('content')
+@yield('content')
+
+@section('footer')
+@extends('layouts.foot')
+@endsection
+<br><br>
+@yield('footer')
     </div>
 
     <!-- Scripts -->
