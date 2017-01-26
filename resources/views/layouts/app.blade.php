@@ -11,7 +11,9 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
     <link href="/css/app.css" rel="stylesheet">
+    <script src="/js/app.js"></script>
 
     <!-- Scripts -->
     <script>
@@ -21,75 +23,76 @@
     </script>
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
+    
+    <div class="navigation">
+        <div class="nav-first">  
+            <a class="logo" href="{{ url('/') }}">
+                <img src="images/flottec-logo.svg" alt="Flottec Global Logo">
+            </a>        
+            <div class="sessions">
+                @if (Auth::guest()) 
+                    <a class="" href="{{ url('/login') }}">Login</a>
+                    <a class="" href="{{ url('/register') }}">{{ trans('navbar.register') }}</a>
+                @else
+                    @if (Auth::user()->type)
+                        <li><a class="small" href="{{ url('/blacklist') }}">{{ trans('navbar.blacklist') }}</a></li>
+                        <li><a class="small" href="{{ url('/blocked') }}">{{ trans('navbar.blocked') }}</a></li>
+                    @endif
+                    
+                    <li class="dropdown">
+                        <a class="small" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            {{ Auth::user()->name }} <span class="caret"></span>
+                        </a>
 
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a class="small" href="{{ url('/contact-us') }}">{{ trans('navbar.contact') }}</a></li>
-                        <li><a class="small" href="{{ url('/global-network') }}">{{ trans('navbar.global') }}</a></li>
-                        <li><a class="small" href="{{ url('/products') }}">{{ trans('navbar.products') }}</a></li>
-                        <li><a class="small" href="{{ url('/research') }}">{{ trans('navbar.research') }}</a></li>
-                        <!-- Authentication Links -->
-                        @if (Auth::guest())
-                            
-                            <li><a class="small" href="{{ url('/login') }}">Login</a></li>
-                            <li><a class="small" href="{{ url('/register') }}">{{ trans('navbar.register') }}</a></li>
-                        @else
-                            @if (Auth::user()->type == 'admin')
-                                <li><a class="small" href="{{ url('/blacklist') }}">{{ trans('navbar.blacklist') }}</a></li>
-                                <li><a class="small" href="{{ url('/blocked') }}">{{ trans('navbar.blocked') }}</a></li>
-                            @endif
-                            
-                            <li class="dropdown">
-                                <a class="small" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a class="small" href="{{ url('/logout') }}"
+                                    onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                                    {{ trans('navbar.logout') }}
                                 </a>
 
-                                <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a class="small" href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                            {{ trans('navbar.logout') }}
-                                        </a>
+                                <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
 
-                                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
                             </li>
-                        @endif
-                    </ul>
-                </div>
+                        </ul>
+                    </li>
+                @endif
             </div>
-        </nav>
+        </div>  
+        <div class="nav-second">
+            <a class="" href="{{ url('/contact-us') }}">
+                <img src="images/contact.svg" alt="" class="icon">
+                <span class="text">{{ trans('navbar.contact') }}</span>
+            </a>
+            <a href="http://flottec.mx">
+                <img src="images/mexico.svg" alt="" class="icon">
+                <span class="text">
+                    Flottec Mexico
+                </span>
+            </a>
+        </div>    
+        <div class="nav-third">
+            <a href="{ url('/') }">Home</a>
+            <a class="" href="{{ url('/products') }}">{{ trans('navbar.products') }}</a>
+            <a class="" href="{{ url('/research') }}">R&D</a>
+            <a href="">SDS & MSDS</a>
+            <a href="{{ url('/global-network') }}">Global Network</a>
+            <a href="">Company</a>
+        </div>  
+    </div>
 
-        @yield('content')
+
+    <div id="app">
+ 
+        <div class="interface">
+            @yield('content')
+        </div>     
+
     </div>
 
     <!-- Scripts -->
-    <script src="/js/app.js"></script>
 </body>
 </html>
