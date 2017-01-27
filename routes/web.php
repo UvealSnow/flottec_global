@@ -12,6 +12,10 @@
 */
 
 Route::get('/', 'LandingController@index');
+Route::get('/info', function(){ 
+	phpinfo(); 
+});
+
 
 Auth::routes();
 
