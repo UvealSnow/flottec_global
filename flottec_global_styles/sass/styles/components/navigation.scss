@@ -1,0 +1,130 @@
+.navigation	{ 
+	display:  flex; 
+	flex-direction:  column; 
+	align-items:  flex-start; 
+	justify-content:  flex-start;  
+	
+	position:  relative;
+
+	width:  100%; 
+
+	background:  #f5f5f5; 
+	border-bottom:  solid 2px #dbdbdb; 
+
+	padding-top:  24px; 
+
+	.nav-first, 
+	.nav-second, 
+	.nav-third {
+		width:  100%; 
+		max-width:  1024px;
+		margin-left:  auto; 
+		margin-right:  auto;  
+	}
+
+	.nav-first {
+		display:  flex; 
+		flex-direction:  row; 
+		align-items:  center; 
+		justify-content:  space-between; 
+
+		.logo img {
+			height:  36px; 
+		}
+
+		.sessions {
+			display:  flex; 
+			flex-direction:  row; 
+			align-items:  center; 
+			justify-content:  flex-end; 
+		}
+		.sessions a {
+			text-transform:  uppercase; 
+			font-weight:  700; 
+			color:  $dark-blue; 
+			margin-right:  21px; 	
+			font-size:  14px; 
+			display:  flex; 
+			flex-direction:  row; 
+			align-items:  center; 
+
+			.text {
+				margin-right:  4px; 
+			}
+			img {
+				max-height:  21px; 
+			}
+			&:last-of-type {
+				margin-right:  0; 
+			}
+		}
+
+	}
+	.nav-second {
+		display:  flex; 
+		flex-direction:  row; 
+		align-items:  center; 
+		justify-content:  flex-end;
+		margin-top:  18px; 
+		a {
+			background:  $blue;
+			color:  #ffffff; 
+			display:  flex;  
+			letter-spacing:  2px; 
+			.icon {
+				margin-top:  0; 
+				margin-bottom:  0; 
+				padding-left:  14px; 
+				padding-right:  14px; 
+				background:  $dark-blue; 
+				display:  flex; 
+				flex-direction:  column; 
+				align-items:  ceneter; 
+				justify-content:  center;   
+			}
+			.text {
+				padding:  14px 18px; 
+				text-transform:  uppercase; 
+			}
+		}
+
+		.search {
+			border-bottom:  solid 2px #424242; 
+			display:  flex; 
+			flex-direction:  row; 
+			align-items:  center; 
+			justify-content:  center; 
+			input {
+				padding:  12px 18px;
+				border-style:  none; 
+				border:  none; 
+			}
+			img {
+				margin-left:  8px; 
+			}
+		}
+
+	}
+	.nav-third {
+		display:  flex; 
+		flex-direction:  row; 
+		align-items:  center; 
+		justify-content:  stretch;
+		div {
+			
+		}
+		a {
+			flex:  1; 
+			padding:  14px 18px; 
+			background-color:  #424242; 
+			color:  #ffffff; 
+			border-right:  solid 1px #757575;  
+			text-transform:  uppercase; 
+			font-weight:  700; 
+			text-align:  center; 
+		}
+		a:last-of-type {
+			border-right:  none; 
+		}
+	}
+}
