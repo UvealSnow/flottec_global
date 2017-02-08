@@ -16,16 +16,7 @@ class ProductController extends Controller {
     }
 
     public function index ($category_id) {
-        
-        $user = Auth::user();
-        if ($user->can('update', Product::class)) {
-            return view ('app.product.index', [
-                'products' => Product::where('category_id', $category_id)->get()
-            ]);
-        }
-
-        return back();
-
+        return redirect ("categories/$category_id");
     }
 
     public function create($category_id) {
@@ -93,7 +84,7 @@ class ProductController extends Controller {
             foreach ($request->images as $image) {
                 $pic = new Picture;
                 $pic->path = $image->store("public/product/$product->id");
-                $product->picture()->save($pic);
+                $product->pictures()->save($pic);
             }
 
             return redirect ("/categories/$category_id/products/$product->id");
@@ -122,7 +113,9 @@ class ProductController extends Controller {
         
         $user = Auth::user();
         if ($user->can('update', Product::class)) {
+            $product = Product::findOrFail($id);
             return view ('app.product.edit', [
+                'product' => $product,
                 'category_id' => $category_id
             ]);
         }
@@ -131,7 +124,7 @@ class ProductController extends Controller {
 
     }
 
-    public function update(Request $request, $id) {
+    public function update(Request $request, $category_id, $id) {
         
         $user = Auth::user();
         if ($user->can('update', Product::class)) {
@@ -144,10 +137,10 @@ class ProductController extends Controller {
                 'chemical_description_es' => 'required|string|max:255',
                 'chemical_family_en' => 'required|string|max:255',
                 'chemical_family_es' => 'required|string|max:255',
-                'safety_sheets' => 'required|array|min:1',
-                'safety_sheets.*' => 'required|file',
-                'tech_sheets' => 'required|array|min:1',
-                'tech_sheets.*' => 'required|file',
+                'safety_sheets' => 'array',
+                'safety_sheets.*' => 'file',
+                'tech_sheets' => 'array',
+                'tech_sheets.*' => 'file',
                 'images.*' => 'image|max:2048'
             ]);
 
@@ -165,24 +158,30 @@ class ProductController extends Controller {
 
             $product->save();
 
-            foreach ($request->safety_sheets as $safety_sheet) {
-                $doc = new Document;
-                $doc->type = 'safety_sheet';
-                $doc->path = $safety_sheet->store("public/product/$product->id");
-                $product->documents()->save($doc);
+            if (count($request->safety_sheets) > 0) {
+                foreach ($request->safety_sheets as $safety_sheet) {
+                    $doc = new Document;
+                    $doc->type = 'safety_sheet';
+                    $doc->path = $safety_sheet->store("public/product/$product->id");
+                    $product->documents()->save($doc);
+                }
+            }
+            
+            if (count($request->tech_sheets) > 0) {
+                foreach ($request->tech_sheets as $tech_sheet) {
+                    $doc = new Document;
+                    $doc->type = 'tech_sheet';
+                    $doc->path = $safety_sheet->store("public/product/$product->id");
+                    $product->documents()->save($doc);
+                }
             }
 
-            foreach ($request->tech_sheets as $tech_sheet) {
-                $doc = new Document;
-                $doc->type = 'tech_sheet';
-                $doc->path = $safety_sheet->store("public/product/$product->id");
-                $product->documents()->save($doc);
-            }
-
-            foreach ($request->images as $image) {
-                $pic = new Picture;
-                $pic->path = $image->store("public/product/$product->id");
-                $product->picture()->save($pic);
+            if (count($request->images) > 0) {
+                foreach ($request->images as $image) {
+                    $pic = new Picture;
+                    $pic->path = $image->store("public/product/$product->id");
+                    $product->picture()->save($pic);
+                }
             }
 
             return redirect ("/categories/$category_id/products/$product->id");

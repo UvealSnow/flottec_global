@@ -26,7 +26,7 @@ Route::get('/home', 'HomeController@index');
 // Resources
 	Route::resource('categories/{category_id}/products', 'ProductController');
 	Route::resource('categories', 'CategoryController');
-	Route::resource('requests', 'RequestController', ['except' => ['create', 'store']]);
+	Route::resource('requests', 'RequestController', ['only' => ['index', 'destroy', 'update']]);
 
 // Static routes
 	Route::get('/contact-us', 'StaticController@contact');

@@ -3,82 +3,65 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Pending;
+use App\User;
 
-class RequestController extends Controller
-{
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
+class RequestController extends Controller {
+
+    public function __construct () {
+        $this->middleware('auth');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+    public function index () {
+
+        $user = Auth::user();
+        if ($user->can('update', Pending::class)) {
+            $pending = Pending::where('status' => 'email_confirmed')->get();
+            return view ('app.request.show', [
+                'pending' => $pending,
+            ]);
+        }
+
+        return back();
+
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
+    public function update ($id) {
+        
+        $user = auth::user();
+
+        if ($user->can('update', Pending::class)) {
+            $pending = Pending::findOrFail($id);
+            $user = new User;
+
+            $user->status = $->status;
+            $user->type = $->type;
+            $user->name = $->name;
+            $user->company = $->company;
+            $user->telephone = $->telephone;
+            $user->locale = $->locale;
+            $user->email = $->email;
+            $user->password = $->password;
+            $user->save();
+            $pending->delete();
+
+            return redirect ("/requests")->with('success', 'User request accepted');
+        }
+
+        return back();
+
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+    public function destroy ($id) {
+        
+        if ($user->can('update', Pending::class)) {
+            Pending::findOrFail($id);
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
+            return redirect ("/requests")->with('success', 'User request deleted');
+        }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+        return back();
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
     }
 }

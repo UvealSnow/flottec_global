@@ -18,12 +18,12 @@ class Product extends Model {
 		return $this->morphMany('App\Picture', 'pictureable');
 	}
 
-	public function getSafetySheets () {
-		return \App\Document::where('type', 'safety_sheet')->get();
+	public function getSafetySheets ($id) {
+		return \App\Document::where([['type', 'safety_sheet'], ['documentable_id', $id]])->get();
 	}
 
-	public function getTechSheets () {
-		return \App\Document::where('type', 'tech_sheet')->get();
+	public function getTechSheets ($id) {
+		return \App\Document::where([['type', 'tech_sheet'], ['documentable_id', $id]])->get();
 	}
 
 	public static function boot () {
