@@ -1,0 +1,50 @@
+.sds-container {
+	display:  flex; 
+	flex-direction:  row; 
+	align-items:  flex-start; 
+	justify-content:  space-between;  
+	flex-wrap:  wrap; 
+	width:  100%; 
+}
+.sds {
+	display:  flex; 
+	flex-direction:  row; 
+	align-items:  flex-start; 
+	justify-content:  flex-start; 
+	width:  47.5%;
+	height:  208px;
+	border:  solid  1px #dbdbdb;  
+	margin-bottom:  5%;  
+	.sds__product-info {
+		display:  flex; 
+		flex-direction:  column; 
+		padding:  18px; 
+		width:  60%; 
+		height:  100%; 
+		label {
+			margin-bottom:  12px; 
+			font-size:  14px;
+			color:  #757575;  
+		}
+		.sds__product-name {
+			margin-bottom:  24px; 
+		} 
+		.sds__product-name, 
+		.sds__product-type {
+			font-size:  18px; 
+			font-weight:  700; 
+		}
+	}	
+	.sds__download {
+		width:  40%; 
+		height:  100%; 
+		background:  $blue; 
+		color:  #ffffff;
+		text-transform:  uppercase; 	
+		display:  flex; 
+		flex-direction:  column; 
+		align-items:  center; 
+		justify-content:  center; 
+		text-align:  center; 
+	}
+}
