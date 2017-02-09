@@ -22,11 +22,15 @@ Route::get('/home', 'HomeController@index');
 
 // User registration
 	Route::post('user', 'UserController@create');
+	Route::get('confirm/{uid}', 'RequestController@confirmEmail');
+	Route::put('requests/accept/{id}', 'RequestController@accept');
+	Route::put('requests/decline/{id}', 'RequestController@decline');
 
 // Resources
 	Route::resource('categories/{category_id}/products', 'ProductController');
 	Route::resource('categories', 'CategoryController');
-	Route::resource('requests', 'RequestController', ['only' => ['index', 'destroy', 'update']]);
+	Route::resource('requests', 'RequestController', ['only' => ['index', 'destroy']]);
+	Route::resource('rnd', 'ResearchController');
 
 // Static routes
 	Route::get('/contact-us', 'StaticController@contact');
@@ -36,3 +40,8 @@ Route::get('/home', 'HomeController@index');
 	Route::get('/privacy', 'StaticController@privacy');
 	Route::get('/disclaimer', 'StaticController@disclaimer');
 	Route::get('/return', 'StaticController@returnpage');
+
+// Dynamic 
+	Route::get('products', 'DynamicController@categories');
+	Route::get('research', 'DynamicController@rnd');
+	Route::get('product-sheets', 'DynamicController@sds');

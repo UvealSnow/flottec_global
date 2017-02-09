@@ -16,6 +16,7 @@ class AuthServiceProvider extends ServiceProvider
         'App\Category' => 'App\Policies\CategoryPolicy',
         'App\Product' => 'App\Policies\ProductPolicy',
         'App\User' => 'App\Policies\UserPolicy',
+        'App\Pending' => 'App\Policies\PendingPolicy',
     ];
 
     /**

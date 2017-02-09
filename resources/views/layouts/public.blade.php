@@ -28,8 +28,20 @@
 	                <img src="/images/flottec-logo.svg" alt="Flottec Global Logo">
 	            </a>        
 	            <div class="sessions">
-	                <a class="" href="{{ url('/login') }}">Login</a>
-	                <a class="" href="{{ url('/register') }}">Register</a>
+	            	@if (Auth::guest())
+	                	<a class="" href="{{ url('/login') }}">Login</a>
+	                	<a class="" href="{{ url('/register') }}">Register</a>
+	                @else
+	                	<a href="{{ route('logout') }}"
+	                	    onclick="event.preventDefault();
+	                	             document.getElementById('logout-form').submit();">
+	                	    LOGOUT
+	                	</a>
+
+	                	<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+	                	    {{ csrf_field() }}
+	                	</form>
+	                @endif
 	            </div>
 	        </div>  
 	        <div class="nav-second">
@@ -46,9 +58,9 @@
 	        </div>    
 	        <div class="nav-third">
 	            <a href="{{ url('/') }}">Home</a>
-	            <a class="" href="{{ url('/products') }}">Products</a>
-	            <a class="" href="{{ url('/research') }}">R&D</a>
-	            <a href="">SDS & MSDS</a>
+	            <a href="{{ url('/products') }}">Products</a>
+	            <a href="{{ url('/research') }}">R&D</a>
+	            <a href="{{ url('/product-sheets') }}">SDS & MSDS</a>
 	            <a href="{{ url('/global-network') }}">Global Network</a>
 	            <a href="">Company</a>
 	        </div>  
@@ -57,6 +69,8 @@
 	    <div id="app">
 	 
 	        <div class="interface">
+
+	        	<br>
 	        	
 		        @yield('content')
 

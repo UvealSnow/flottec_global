@@ -44,8 +44,8 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         <li><a href="{{ url('categories') }}">Categories & Products</a></li>
+                        <li><a href="{{ url('rnd') }}">R&D</a></li>
                         <li><a href="{{ url('requests') }}">Account Requests</a></li>
-                        <li><a href="{{ url('blacklists') }}">Blacklist</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 {{ Auth::user()->name }} <span class="caret"></span>
