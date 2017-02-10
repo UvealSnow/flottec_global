@@ -147,6 +147,7 @@ class ProductController extends Controller {
             ]);
 
             $product = Product::findOrFail($id);
+            // dd($request->safety_sheets[0]->getClientOriginalName(), $product->getSafetySheets($product->id));
 
             $product->uri = strtolower($this->clean($request->name));
             $product->classification_en = $request->classification_en;

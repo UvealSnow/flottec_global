@@ -49,7 +49,9 @@
 						@if ($product->getSafetySheets($product->id)->count() > 0)
 							@foreach ($product->getSafetySheets($product->id) as $i => $safety_sheet)
 								<div>
-									<a class="btn btn-primary" target="_blank" href="{{ Storage::url($safety_sheet->path) }}">Download SH {{ $i + 1 }}</a>
+									<a class="btn btn-primary" target="_blank" href="{{ Storage::url($safety_sheet->path) }}">
+										{{ isset($safety_sheet->original_name) ? $safety_sheet->original_name : __('interface.safety_sheets') }}
+									</a>
 									<form style="display: inline-block;" action="{{ url("/document/$safety_sheet->id") }}" method="post">
 										{{ csrf_field() }}
 										<input type="hidden" name="_method" value="delete">
@@ -70,7 +72,9 @@
 						@if ($product->getTechSheets($product->id)->count() > 0)
 							@foreach ($product->getTechSheets($product->id) as $i => $tech_sheet)
 								<div>
-									<a class="btn btn-primary" target="_blank" href="{{ Storage::url($tech_sheet->path) }}">Download TS {{ $i + 1 }}</a>
+									<a class="btn btn-primary" target="_blank" href="{{ Storage::url($tech_sheet->path) }}">
+										{{ isset($tech_sheet->original_name) ? $tech_sheet->original_name : __('interface.tech_sheets') }}
+									</a>
 									<form style="display: inline-block;" action="{{ url("/document/$tech_sheet->id") }}" method="post">
 										{{ csrf_field() }}
 										<input type="hidden" name="_method" value="delete">
