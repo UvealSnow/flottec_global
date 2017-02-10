@@ -23,7 +23,7 @@
 								<div class="sds__product-type">Tech Sheet</div>
 							@endif
 						</div>
-						<a class="sds__download" href="{{ url("/") }}">Download</a>
+						<a class="sds__download" href="{{ url("/download/$document->id") }}">Download</a>
 					</div>
 				@endforeach
 			</div>

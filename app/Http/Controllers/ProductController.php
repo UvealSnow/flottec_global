@@ -70,6 +70,7 @@ class ProductController extends Controller {
             foreach ($request->safety_sheets as $safety_sheet) {
                 $doc = new Document;
                 $doc->type = 'safety_sheet';
+                $doc->original_name = $safety_sheet->getClientOriginalName();
                 $doc->path = $safety_sheet->store("public/product/$product->id");
                 $product->documents()->save($doc);
             }
@@ -77,7 +78,8 @@ class ProductController extends Controller {
             foreach ($request->tech_sheets as $tech_sheet) {
                 $doc = new Document;
                 $doc->type = 'tech_sheet';
-                $doc->path = $safety_sheet->store("public/product/$product->id");
+                $doc->original_name = $tech_sheet->getClientOriginalName();
+                $doc->path = $tech_sheet->store("public/product/$product->id");
                 $product->documents()->save($doc);
             }
 
@@ -162,6 +164,7 @@ class ProductController extends Controller {
                 foreach ($request->safety_sheets as $safety_sheet) {
                     $doc = new Document;
                     $doc->type = 'safety_sheet';
+                    $doc->original_name = $safety_sheet->getClientOriginalName();
                     $doc->path = $safety_sheet->store("public/product/$product->id");
                     $product->documents()->save($doc);
                 }
@@ -171,7 +174,8 @@ class ProductController extends Controller {
                 foreach ($request->tech_sheets as $tech_sheet) {
                     $doc = new Document;
                     $doc->type = 'tech_sheet';
-                    $doc->path = $safety_sheet->store("public/product/$product->id");
+                    $doc->original_name = $tech_sheet->getClientOriginalName();
+                    $doc->path = $tech_sheet->store("public/product/$product->id");
                     $product->documents()->save($doc);
                 }
             }
@@ -180,7 +184,7 @@ class ProductController extends Controller {
                 foreach ($request->images as $image) {
                     $pic = new Picture;
                     $pic->path = $image->store("public/product/$product->id");
-                    $product->picture()->save($pic);
+                    $product->pictures()->save($pic);
                 }
             }
 

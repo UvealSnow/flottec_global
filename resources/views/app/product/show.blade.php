@@ -52,7 +52,7 @@
 									<a class="btn btn-primary" target="_blank" href="{{ Storage::url($safety_sheet->path) }}">Download SH {{ $i + 1 }}</a>
 									<form style="display: inline-block;" action="{{ url("/document/$safety_sheet->id") }}" method="post">
 										{{ csrf_field() }}
-										<input type="hidden" name="_method" value="put">
+										<input type="hidden" name="_method" value="delete">
 										<button class="btn btn-danger">Delete</button>
 									</form>
 								</div>
@@ -73,7 +73,7 @@
 									<a class="btn btn-primary" target="_blank" href="{{ Storage::url($tech_sheet->path) }}">Download TS {{ $i + 1 }}</a>
 									<form style="display: inline-block;" action="{{ url("/document/$tech_sheet->id") }}" method="post">
 										{{ csrf_field() }}
-										<input type="hidden" name="_method" value="put">
+										<input type="hidden" name="_method" value="delete">
 										<button class="btn btn-danger">Delete</button>
 									</form>
 								</div>

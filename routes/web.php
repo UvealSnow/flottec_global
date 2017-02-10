@@ -41,7 +41,10 @@ Route::get('/home', 'HomeController@index');
 	Route::get('/disclaimer', 'StaticController@disclaimer');
 	Route::get('/return', 'StaticController@returnpage');
 
-// Dynamic 
+// Dynamic
+	Route::get('download/{id}', 'DynamicController@download');
+	Route::get('products/{uri}/{name}', 'DynamicController@productShow');
+	Route::get('products/{uri}', 'DynamicController@productIndex');
 	Route::get('products', 'DynamicController@categories');
 	Route::get('research', 'DynamicController@rnd');
 	Route::get('product-sheets', 'DynamicController@sds');

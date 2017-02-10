@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="interface">
-		<h1>Products</h1>
+		<h1>Product Categories</h1>
 		<p>
 			Flottec has specialty and commodity chemicals to meet your needs. Please click on the category of products your are interested in for further information.
 		</p>	
@@ -11,7 +11,7 @@
 		@if ($categories->count() > 0)
 			<div class="categories-container">
 				@foreach ($categories as $category)
-					<a class="category" href="">
+					<a class="category" href="{{ url("products/$category->uri") }}">
 						<div class="category__image">
 							@if ($category->picture)
 								<img src="{{ Storage::url($category->picture->path) }}" alt="">
