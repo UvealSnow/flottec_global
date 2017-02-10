@@ -45,3 +45,7 @@ Route::get('/home', 'HomeController@index');
 	Route::get('products', 'DynamicController@categories');
 	Route::get('research', 'DynamicController@rnd');
 	Route::get('product-sheets', 'DynamicController@sds');
+
+// Deletes
+	Route::delete('picture/{id}', 'DeleteController@picture');
+	Route::delete('document/{id}', 'DeleteController@document');

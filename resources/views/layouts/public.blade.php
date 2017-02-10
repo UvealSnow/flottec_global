@@ -58,11 +58,11 @@
 	        </div>    
 	        <div class="nav-third">
 	            <a href="{{ url('/') }}">Home</a>
-	            <a href="{{ url('/products') }}">Products</a>
-	            <a href="{{ url('/research') }}">R&D</a>
-	            <a href="{{ url('/product-sheets') }}">SDS & MSDS</a>
-	            <a href="{{ url('/global-network') }}">Global Network</a>
-	            <a href="">Company</a>
+	            <a href="{{ url('products') }}">Products</a>
+	            <a href="{{ url('research') }}">R&D</a>
+	            <a href="{{ url('product-sheets') }}">SDS & MSDS</a>
+	            <a href="{{ url('global-network') }}">Global Network</a>
+	            <a href="{{ url("company") }}">Company</a>
 	        </div>  
 	    </div>
 
@@ -91,16 +91,16 @@
 	    		<h1>Sitemap</h1>
 	    		<hr>
 	    		<div class="link-container">
-	    			<a href="">Global Network</a>
-	    			<a href="">Home</a>
-	    			<a href="">Company</a>
-	    			<a href="">Products</a>
-	    			<a href="">R&D</a>
-	    			<a href="">Flottec Mexico</a>
-	    			<a href="">Contact</a>
-	    			<a href="">SDS/MSDS</a>
-	    			<a href="">Privacy Policy</a>
-	    			<a href="">Disclaimer</a>
+	    			<a href="{{ url("global-network") }}">Global Network</a>
+	    			<a href="{{ url("/") }}">Home</a>
+	    			<a href="{{ url("company") }}">Company</a>
+	    			<a href="{{ url("products") }}">Products</a>
+	    			<a href="{{ url("research") }}">R&D</a>
+	    			<a href="http://flottec.mx">Flottec Mexico</a>
+	    			<a href="{{ url("contact") }}">Contact</a>
+	    			<a href="{{ url("product-sheets") }}">SDS/MSDS</a>
+	    			<a href="{{ url("privacy") }}">Privacy Policy</a>
+	    			<a href="{{ url("disclaimer") }}">Disclaimer</a>
 	    		</div>
 	    	</div>
 	    </footer>
